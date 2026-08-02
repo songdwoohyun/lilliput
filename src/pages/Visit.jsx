@@ -1,8 +1,76 @@
 function Visit() {
+  const address = "경기 수원시 팔달구 화서문로71번길 21 1층"
+  const naverMapUrl = "https://map.naver.com/p/entry/place/1838953160?placePath=%2Finformation%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608022010%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0155584&lat=37.2867261&c=15.00,0,0,0,dh"
+  const reservationUrl = naverMapUrl // TODO: 정식 네이버 예약 링크로 교체 예정
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f0e4d3]">
-      <h1 className="text-5xl font-serif text-[#3a3226]">오시는 길</h1>
+    <div className="min-h-screen bg-[#f0e4d3]">
+      <div className="text-center pt-16 pb-10 px-4">
+        <h1 className="text-4xl font-serif text-[#3a3226] mb-2">오시는 길</h1>
+        <p className="text-[#8a7d63] text-sm tracking-widest">VISIT · RESERVATION</p>
+      </div>
+
+      {/* 지도 */}
+      <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] h-[50vh] min-h-[320px]">
+        <iframe
+          title="찾아오시는 길 지도"
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=16&output=embed`}
+          className="w-full h-full border-0"
+          loading="lazy"
+          allowFullScreen
+        />
+      </div>
+
+      {/* 연한 색 밴드: 상세정보 */}
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#faf6ee] py-16 px-6">
+        <div className="max-w-2xl mx-auto">
+          <dl className="space-y-6">
+            <div>
+              <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">ADDRESS</dt>
+              <dd className="text-[#3a3226] font-serif text-lg">{address}</dd>
+            </div>
+            <div>
+              <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">HOURS</dt>
+              <dd className="text-[#3a3226]">오전 10:00 오픈 (영업 종료 시간 추후 안내)</dd>
+            </div>
+            <div>
+              <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">CLOSED</dt>
+              <dd className="text-[#3a3226]">연중무휴</dd>
+            </div>
+            <div>
+              <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">CONTACT</dt>
+              <dd className="text-[#3a3226]">0507-1382-4940</dd>
+            </div>
+          </dl>
+
+          <a
+            href={`https://map.naver.com/p/search/${encodeURIComponent(address)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 block text-center border border-[#4a5943] text-[#4a5943] py-3 rounded-sm text-sm tracking-wide hover:bg-[#4a5943] hover:text-[#f0e4d3] transition-colors duration-300"
+          >
+            지도 앱에서 길찾기 →
+          </a>
+        </div>
+      </div>
+
+      {/* 진한 색 밴드: 예약 */}
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#4a5943] py-16 px-6 border-b border-[#6b7862]">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-[#d8ccb4] text-sm mb-4">전시 관람은 사전 예약을 권장드립니다.</p>
+          
+          <a
+            href={reservationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#f0e4d3] text-[#3a3226] px-10 py-4 rounded-sm text-sm tracking-widest hover:bg-white transition-colors duration-300"
+          >
+            네이버 예약으로 이동
+          </a>
+        </div>
+      </div>
     </div>
   )
 }
+
 export default Visit

@@ -1,8 +1,39 @@
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import library from '../assets/illustrations/home/library.png'
+import shelf from '../assets/illustrations/home/shelf.png'
+
+function FloorCard({ to, image, label, alt }) {
+  return (
+    <Link to={to} className="relative w-full sm:w-[48%] aspect-[3/4] overflow-hidden rounded-sm block group">
+      <motion.img
+        src={image}
+        alt={alt}
+        className="w-full h-full object-cover"
+        whileHover={{ scale: 1.06 }}
+        transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileHover={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        className="absolute inset-0 bg-black/70 flex items-center justify-center"
+      >
+        <span className="text-white text-6xl sm:text-8xl tracking-[0.15em] font-serif lining-nums">{label}</span>
+      </motion.div>
+    </Link>
+  )
+}
+
 function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f0e4d3]">
-      <h1 className="text-5xl font-serif text-[#3a3226]">Home</h1>
+    <div className="min-h-screen bg-[#f0e4d3] flex items-center justify-center">
+      <div className="w-full max-w-7xl px-6 py-16 flex flex-col sm:flex-row items-center justify-center gap-10">
+        <FloorCard to="/first-floor" image={shelf} label="1F" alt="1층 공간 안내" />
+        <FloorCard to="/second-floor" image={library} label="2F" alt="2층 공간 안내" />
+      </div>
     </div>
   )
 }
+
 export default Home

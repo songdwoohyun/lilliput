@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import FirstFloor from './pages/FirstFloor'
+import SecondFloor from './pages/SecondFloor'
 import About from './pages/About'
-import Artist from './pages/Artist'
-import Gallery from './pages/Gallery'
-import ExhibitionMap from './pages/ExhibitionMap'
 import Visit from './pages/Visit'
 import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
@@ -13,12 +13,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/first-floor" element={<FirstFloor />} />
+        <Route path="/second-floor" element={<SecondFloor />} />
         <Route path="/about" element={<About />} />
-        <Route path="/artist" element={<Artist />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/exhibition-map" element={<ExhibitionMap />} />
         <Route path="/visit" element={<Visit />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
