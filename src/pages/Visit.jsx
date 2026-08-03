@@ -21,8 +21,8 @@ function Visit() {
         />
       </div>
 
-      {/* 연한 색 밴드: 상세정보 */}
-      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#faf6ee] py-16 px-6">
+      {/* 상세정보 */}
+      <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#f0e4d3] py-16 px-6">
         <div className="max-w-2xl mx-auto">
           <dl className="space-y-6">
             <div>
