@@ -1,5 +1,5 @@
 function Visit() {
-  const address = "경기 수원시 팔달구 화서문로71번길 21 1층"
+  const address = "경기 수원시 팔달구 화서문로71번길 21"
   const naverMapUrl = "https://map.naver.com/p/entry/place/1838953160?placePath=%2Finformation%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608022010%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0155584&lat=37.2867261&c=15.00,0,0,0,dh"
   const reservationUrl = naverMapUrl // TODO: 정식 네이버 예약 링크로 교체 예정
 
@@ -31,7 +31,7 @@ function Visit() {
             </div>
             <div>
               <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">HOURS</dt>
-              <dd className="text-[#3a3226]">오전 10:00 오픈 (영업 종료 시간 추후 안내)</dd>
+              <dd className="text-[#3a3226]">10:00 ~ 19:00</dd>
             </div>
             <div>
               <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">CLOSED</dt>
@@ -39,7 +39,7 @@ function Visit() {
             </div>
             <div>
               <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">CONTACT</dt>
-              <dd className="text-[#3a3226]">0507-1382-4940</dd>
+              <dd className="text-[#3a3226]">010-9012-4940</dd>
             </div>
           </dl>
 
