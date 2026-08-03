@@ -1,4 +1,16 @@
 import { Link } from 'react-router-dom'
+import firstFloorArtworksData from '../data/firstFloorArtworks.json'
+
+// assets/artworks 폴더의 이미지를 파일명 기준으로 일괄 로드
+const artworkImageModules = import.meta.glob('../assets/artworks/*.jpg', {
+  eager: true,
+  import: 'default',
+})
+
+const artworks = firstFloorArtworksData.map((artwork) => ({
+  ...artwork,
+  image: artworkImageModules[`../assets/artworks/${artwork.file}`],
+}))
 
 function GoodsCard({ title }) {
   return (
@@ -13,14 +25,27 @@ function GoodsCard({ title }) {
   )
 }
 
-function ArtworkPlaceholderCard() {
+// objectPosition: 기본은 'center'. 특정 이미지의 크롭이 어색하면
+// firstFloorArtworks.json 해당 항목에 "objectPosition" 값을 추가해 개별 조정 가능
+function ArtworkCard({ title, image, objectPosition = 'center' }) {
   return (
     <div className="bg-[#faf6ee] border border-[#d8ccb4] rounded-sm overflow-hidden shadow-sm">
-      <div className="aspect-square bg-[#e8ddc7] flex items-center justify-center">
-        <span className="text-[#a89b7d] text-sm">이미지 준비 중</span>
+      <div className="aspect-square bg-[#e8ddc7] overflow-hidden">
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover"
+            style={{ objectPosition }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-[#a89b7d] text-sm">이미지 준비 중</span>
+          </div>
+        )}
       </div>
       <div className="p-5 text-center">
-        <h3 className="font-serif text-lg text-[#3a3226]">&nbsp;</h3>
+        <h3 className="font-serif text-lg text-[#3a3226]">{title || ' '}</h3>
       </div>
     </div>
   )
@@ -59,8 +84,13 @@ function FirstFloor() {
         <div>
           <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">ARTWORKS</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <ArtworkPlaceholderCard key={i} />
+            {artworks.map((artwork) => (
+              <ArtworkCard
+                key={artwork.id}
+                title={artwork.title}
+                image={artwork.image}
+                objectPosition={artwork.objectPosition}
+              />
             ))}
           </div>
         </div>
