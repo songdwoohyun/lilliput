@@ -38,11 +38,11 @@ function ExhibitionSection({ title, items }) {
     <div className="mb-16 last:mb-0">
       <h3 className="text-xl text-[#3a3226] mb-3">{title}</h3>
       <div className="border-t border-[#3a3226] mb-7" />
-      <div className="space-y-5">
+      <div className="space-y-2 sm:space-y-5">
         {items.map((item, i) => (
           <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
-            <span className="text-[14.7px] text-[#4a5943] font-semibold italic sm:w-20 sm:shrink-0">{item.date}</span>
-            <span className="text-[14.7px] text-[#3a3226] leading-relaxed">{item.title}</span>
+            <span className="text-[13.4px] sm:text-[16px] text-[#4a5943] font-semibold italic sm:w-20 sm:shrink-0">{item.date}</span>
+            <span className="text-[13.4px] sm:text-[16px] text-[#3a3226] leading-relaxed">{item.title}</span>
           </div>
         ))}
       </div>
@@ -179,13 +179,15 @@ function About() {
 
       {/* 연혁 섹션 */}
       <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#FFFDF9] px-6">
-        <div className="max-w-3xl mx-auto px-0 sm:px-4 py-24">
+        <div className="max-w-5xl mx-auto px-0 sm:px-4 py-24">
           <div className="text-center mb-16">
             <h2 className="text-2xl text-[#3a3226] mb-1">연혁</h2>
             <p className="text-sm text-[#8a7d63] tracking-widest">HISTORY</p>
           </div>
-          <ExhibitionSection title="개인전" items={soloExhibitions} />
-          <ExhibitionSection title="단체전" items={groupExhibitions} />
+          <div className="sm:grid sm:grid-cols-2 sm:gap-x-16">
+            <ExhibitionSection title="개인전" items={soloExhibitions} />
+            <ExhibitionSection title="단체전" items={groupExhibitions} />
+          </div>
         </div>
       </div>
 
