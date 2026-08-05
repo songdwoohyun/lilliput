@@ -12,7 +12,7 @@ function Navbar() {
         <img src={logoHorizontal} alt="THE LILLIPUT COLLECTION" className="hidden sm:block sm:h-10 w-auto" />
       </Link>
       <div className="flex items-center gap-3 sm:gap-8">
-        <div className="flex sm:hidden items-center gap-3">
+        <div className="flex items-center gap-3 sm:gap-8">
           <Link to="/first-floor" className={linkStyle}>1F</Link>
           <Link to="/second-floor" className={linkStyle}>2F</Link>
         </div>

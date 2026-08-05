@@ -1,58 +1,75 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import firstFloorArtworksData from '../data/firstFloorArtworks.json'
+import { AnimatePresence, motion } from 'framer-motion'
 
-// assets/artworks 폴더의 이미지를 파일명 기준으로 일괄 로드
-const artworkImageModules = import.meta.glob('../assets/artworks/*.jpg', {
+const goodsImageModules = import.meta.glob('../assets/goods/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+  eager: true,
+  import: 'default',
+})
+const artworkImageModules = import.meta.glob('../assets/artworks/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
   eager: true,
   import: 'default',
 })
 
-const artworks = firstFloorArtworksData.map((artwork) => ({
-  ...artwork,
-  image: artworkImageModules[`../assets/artworks/${artwork.file}`],
-}))
+const toSortedImageList = (modules) =>
+  Object.keys(modules)
+    .sort()
+    .map((path) => modules[path])
 
-function GoodsCard({ title }) {
+const goodsImages = toSortedImageList(goodsImageModules)
+const artworkImages = toSortedImageList(artworkImageModules)
+
+function SquarePhotoGrid({ images, onSelect }) {
   return (
-    <div className="bg-[#faf6ee] border border-[#d8ccb4] rounded-sm overflow-hidden shadow-sm">
-      <div className="aspect-square bg-[#e8ddc7] flex items-center justify-center">
-        <span className="text-[#a89b7d] text-sm">이미지 준비 중</span>
-      </div>
-      <div className="p-5 text-center">
-        <h3 className="font-serif text-lg text-[#3a3226]">{title}</h3>
-      </div>
+    <div className="grid grid-cols-3 gap-2 sm:gap-4">
+      {images.map((src, i) => (
+        <button
+          key={src}
+          type="button"
+          onClick={() => onSelect(src)}
+          className="aspect-square overflow-hidden bg-[#e8ddc7] cursor-pointer"
+        >
+          <img
+            src={src}
+            alt={`이미지 ${i + 1}`}
+            className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
+            draggable={false}
+          />
+        </button>
+      ))}
     </div>
   )
 }
 
-// objectPosition: 기본은 'center'. 특정 이미지의 크롭이 어색하면
-// firstFloorArtworks.json 해당 항목에 "objectPosition" 값을 추가해 개별 조정 가능
-function ArtworkCard({ title, image, objectPosition = 'center' }) {
+function Lightbox({ image, onClose }) {
   return (
-    <div className="bg-[#faf6ee] border border-[#d8ccb4] rounded-sm overflow-hidden shadow-sm">
-      <div className="aspect-square bg-[#e8ddc7] overflow-hidden">
-        {image ? (
-          <img
+    <AnimatePresence>
+      {image && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={onClose}
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-6 cursor-pointer"
+        >
+          <motion.img
+            initial={{ scale: 0.96 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.96 }}
+            transition={{ duration: 0.25 }}
             src={image}
-            alt={title}
-            className="w-full h-full object-cover"
-            style={{ objectPosition }}
+            alt=""
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-full max-h-[90vh] object-contain shadow-2xl cursor-default"
           />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-[#a89b7d] text-sm">이미지 준비 중</span>
-          </div>
-        )}
-      </div>
-      <div className="p-5 text-center">
-        <h3 className="font-serif text-lg text-[#3a3226]">{title || ' '}</h3>
-      </div>
-    </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
 
 function FirstFloor() {
-  const goods = ['엽서', '에코백', '수제 소품']
+  const [lightboxImage, setLightboxImage] = useState(null)
 
   return (
     <div className="min-h-screen bg-[#f0e4d3] px-4 sm:px-8 py-16">
@@ -74,27 +91,16 @@ function FirstFloor() {
 
         <div className="mb-32">
           <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">GOODS</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {goods.map((title) => (
-              <GoodsCard key={title} title={title} />
-            ))}
-          </div>
+          <SquarePhotoGrid images={goodsImages} onSelect={setLightboxImage} />
         </div>
 
         <div>
           <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">ARTWORKS</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {artworks.map((artwork) => (
-              <ArtworkCard
-                key={artwork.id}
-                title={artwork.title}
-                image={artwork.image}
-                objectPosition={artwork.objectPosition}
-              />
-            ))}
-          </div>
+          <SquarePhotoGrid images={artworkImages} onSelect={setLightboxImage} />
         </div>
       </div>
+
+      <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </div>
   )
 }
