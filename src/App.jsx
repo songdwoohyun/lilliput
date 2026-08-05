@@ -7,6 +7,7 @@ import About from './pages/About'
 import Visit from './pages/Visit'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
+import { LanguageProvider } from './i18n/LanguageContext'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -20,18 +21,20 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/first-floor" element={<FirstFloor />} />
-        <Route path="/second-floor" element={<SecondFloor />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/visit" element={<Visit />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/first-floor" element={<FirstFloor />} />
+          <Route path="/second-floor" element={<SecondFloor />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/visit" element={<Visit />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </LanguageProvider>
   )
 }
 

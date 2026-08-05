@@ -6,6 +6,8 @@ import hotspots from '../data/mapHotspots.json'
 import MapHotspot from '../components/gallery/MapHotspot'
 import ArtworkModal from '../components/gallery/ArtworkModal'
 import mapImage from '../assets/illustrations/exhibition-map-2f-shelf.jpg'
+import { useLanguage } from '../i18n/LanguageContext'
+import { useStrings } from '../i18n/strings'
 
 const houseImageModules = import.meta.glob('../assets/illustrations/houses/*.png', {
   eager: true,
@@ -20,6 +22,8 @@ const artworksWithImages = artworks.map((artwork) => ({
 function SecondFloor() {
   const [selected, setSelected] = useState(null)
   const [showScrollHint, setShowScrollHint] = useState(true)
+  const { lang } = useLanguage()
+  const t = useStrings(lang)
 
   const findArtwork = (id) => artworksWithImages.find((a) => a.id === id)
 
@@ -35,10 +39,10 @@ function SecondFloor() {
         <h1 className="text-4xl font-serif text-[#3a3226] mb-2">Private Exhibition Room</h1>
         <p className="text-[#8a7d63] text-sm tracking-widest mb-10">2F</p>
         <p className="text-[#3a3226] mb-10">
-          예약제 돌하우스 특별 전시입니다.
+          {t.secondFloor.intro}
         </p>
         <p className="text-[#8a7d63] text-sm">
-          집 그림 위에 마우스를 올리거나 클릭해서 작품 설명을 확인해보세요.
+          {t.secondFloor.hint}
         </p>
       </div>
       <Link
@@ -78,7 +82,7 @@ function SecondFloor() {
                 transition={{ duration: 0.3 }}
                 className="ml-4 inline-flex items-center whitespace-nowrap rounded-full bg-[#4a5943]/90 px-3 py-1.5 text-xs text-[#f0e4d3] shadow-md"
               >
-                옆으로 스크롤하며 둘러보세요 →
+                {t.secondFloor.scrollHint}
               </motion.div>
             )}
           </AnimatePresence>

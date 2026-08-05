@@ -1,6 +1,33 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLanguage } from '../../i18n/LanguageContext'
+import { useStrings } from '../../i18n/strings'
+
+function localize(artwork, lang) {
+  if (!artwork) return artwork
+  if (lang === 'ko') {
+    return { title: artwork.title, subtitle: artwork.titleEn, year: artwork.year, description: artwork.description }
+  }
+  if (lang === 'ja') {
+    return {
+      title: artwork.titleJa || artwork.title,
+      subtitle: artwork.title,
+      year: artwork.year_ja || artwork.year,
+      description: artwork.description_ja || artwork.description,
+    }
+  }
+  return {
+    title: artwork.titleEn || artwork.title,
+    subtitle: artwork.title,
+    year: artwork.year_en || artwork.year,
+    description: artwork.description_en || artwork.description,
+  }
+}
 
 function ArtworkModal({ artwork, onClose }) {
+  const { lang } = useLanguage()
+  const t = useStrings(lang)
+  const localized = localize(artwork, lang)
+
   return (
     <AnimatePresence>
       {artwork && (
@@ -22,30 +49,30 @@ function ArtworkModal({ artwork, onClose }) {
                 <motion.img
                   layoutId={`image-${artwork.id}`}
                   src={artwork.image}
-                  alt={artwork.title}
+                  alt={localized.title}
                   transition={{ layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } }}
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <span className="text-[#a89b7d] text-sm">이미지 준비 중</span>
+                <span className="text-[#a89b7d] text-sm">{t.modal.imagePending}</span>
               )}
             </div>
             <div className="p-8">
-              <h2 className="font-serif text-2xl text-[#3a3226]">{artwork.title}</h2>
-              {artwork.titleEn && (
-                <p className="text-sm italic text-[#8a7d63] mt-1">{artwork.titleEn}</p>
+              <h2 className="font-serif text-2xl text-[#3a3226]">{localized.title}</h2>
+              {localized.subtitle && (
+                <p className="text-sm italic text-[#8a7d63] mt-1">{localized.subtitle}</p>
               )}
-              {artwork.year && (
-                <p className="text-xs text-[#a89b7d] mt-2 tracking-widest">{artwork.year}</p>
+              {localized.year && (
+                <p className="text-xs text-[#a89b7d] mt-2 tracking-widest">{localized.year}</p>
               )}
               <p className="text-[#5a5040] leading-relaxed mt-6 whitespace-pre-line">
-                {artwork.description}
+                {localized.description}
               </p>
               <button
                 onClick={onClose}
                 className="mt-8 text-sm text-[#8a7d63] hover:text-[#3a3226] transition-colors duration-300"
               >
-                ✕ 닫기
+                {t.modal.close}
               </button>
             </div>
           </motion.div>

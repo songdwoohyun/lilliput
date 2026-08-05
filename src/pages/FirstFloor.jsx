@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLanguage } from '../i18n/LanguageContext'
+import { useStrings } from '../i18n/strings'
 
 const goodsImageModules = import.meta.glob('../assets/goods/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
@@ -70,6 +72,8 @@ function Lightbox({ image, onClose }) {
 
 function FirstFloor() {
   const [lightboxImage, setLightboxImage] = useState(null)
+  const { lang } = useLanguage()
+  const t = useStrings(lang)
 
   return (
     <div className="min-h-screen bg-[#f0e4d3] px-4 sm:px-8 py-16">
@@ -86,16 +90,16 @@ function FirstFloor() {
         </h1>
         <p className="text-center text-[#8a7d63] text-sm tracking-widest mb-10">1F</p>
         <p className="text-center text-[#3a3226] mb-10">
-          돌하우스 작품 상설 전시와 굿즈를 만나볼 수 있습니다.
+          {t.firstFloor.intro}
         </p>
 
         <div className="mb-32">
-          <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">GOODS</h2>
+          <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">{t.firstFloor.goods}</h2>
           <SquarePhotoGrid images={goodsImages} onSelect={setLightboxImage} />
         </div>
 
         <div>
-          <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">ARTWORKS</h2>
+          <h2 className="font-serif text-2xl text-[#3a3226] text-center mb-10">{t.firstFloor.artworks}</h2>
           <SquarePhotoGrid images={artworkImages} onSelect={setLightboxImage} />
         </div>
       </div>

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import library from '../assets/illustrations/home/library.jpg'
 import shelf from '../assets/illustrations/home/shelf.jpg'
+import { useLanguage } from '../i18n/LanguageContext'
+import { useStrings } from '../i18n/strings'
 
 function FloorCard({ to, image, label, alt }) {
   return (
@@ -26,11 +28,14 @@ function FloorCard({ to, image, label, alt }) {
 }
 
 function Home() {
+  const { lang } = useLanguage()
+  const t = useStrings(lang)
+
   return (
     <div className="min-h-screen bg-[#f0e4d3] flex items-center justify-center">
       <div className="w-full max-w-7xl px-6 py-16 flex flex-col sm:flex-row items-center justify-center gap-10">
-        <FloorCard to="/first-floor" image={shelf} label="1F" alt="1층 공간 안내" />
-        <FloorCard to="/second-floor" image={library} label="2F" alt="2층 공간 안내" />
+        <FloorCard to="/first-floor" image={shelf} label="1F" alt={t.home.floor1Alt} />
+        <FloorCard to="/second-floor" image={library} label="2F" alt={t.home.floor2Alt} />
       </div>
     </div>
   )
