@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import library from '../assets/illustrations/home/library.png'
-import shelf from '../assets/illustrations/home/shelf.png'
+import library from '../assets/illustrations/home/library.jpg'
+import shelf from '../assets/illustrations/home/shelf.jpg'
 
 function FloorCard({ to, image, label, alt }) {
   return (
