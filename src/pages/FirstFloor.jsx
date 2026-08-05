@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const goodsImageModules = import.meta.glob('../assets/goods/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const goodsImageModules = import.meta.glob('../assets/goods/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
   import: 'default',
 })
-const artworkImageModules = import.meta.glob('../assets/artworks/*.{jpg,jpeg,png,JPG,JPEG,PNG}', {
+const artworkImageModules = import.meta.glob('../assets/artworks/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
   import: 'default',
 })
