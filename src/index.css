@@ -8,3 +8,8 @@ html,
 body {
   background-color: #f0e4d3;
 }
+
+.font-vintage {
+  font-family: 'Cormorant Garamond', 'Nanum Myeongjo', Georgia, serif;
+  font-weight: 500;
+}
