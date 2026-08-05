@@ -1,9 +1,9 @@
 [
   { "id": "library", "x": 0.71, "y": 33.33, "w": 7.43, "h": 22.97 },
   { "id": "tower-of-silence", "x": 7.31, "y": 2.52, "w": 8.71, "h": 32.98 },
-  { "id": "journey-between-books", "x": 9.33, "y": 36.27, "w": 1.99, "h": 8.34 },
-  { "id": "journey-between-books", "x": 12.12, "y": 36.20, "w": 2.05, "h": 8.41 },
-  { "id": "journey-between-books", "x": 11.10, "y": 45.31, "w": 2.04, "h": 8.12 },
+  { "id": "journey-between-books-1", "x": 9.33, "y": 36.27, "w": 1.99, "h": 8.34 },
+  { "id": "journey-between-books-2", "x": 12.12, "y": 36.20, "w": 2.05, "h": 8.41 },
+  { "id": "journey-between-books-3", "x": 11.10, "y": 45.31, "w": 2.04, "h": 8.12 },
   { "id": "wing-chair", "x": 16.36, "y": 37.46, "w": 11.18, "h": 3.79 },
   { "id": "memory-garden", "x": 16.70, "y": 45.73, "w": 5.38, "h": 10.15 },
   { "id": "bedroom-2", "x": 22.11, "y": 46.92, "w": 5.06, "h": 8.89 },
@@ -19,7 +19,7 @@
   { "id": "carl-larssons-cabin", "x": 68.53, "y": 34.31, "w": 14.31, "h": 18.63 },
   { "id": "ones-own-cabin", "x": 82.56, "y": 14.22, "w": 7.94, "h": 10.99 },
   { "id": "playground", "x": 82.73, "y": 25.35, "w": 7.68, "h": 18.70 },
-  { "id": "journey-between-books", "x": 85.46, "y": 45.45, "w": 2.51, "h": 9.59 },
+  { "id": "journey-between-books-0", "x": 85.46, "y": 45.45, "w": 2.51, "h": 9.59 },
   { "id": "lilliput-1", "x": 90.38, "y": 15.13, "w": 8.77, "h": 12.39 },
   { "id": "cuckoo-clock-shop", "x": 90.44, "y": 27.52, "w": 8.37, "h": 22.48 }
 ]
