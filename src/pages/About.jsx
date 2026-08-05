@@ -108,7 +108,7 @@ function About() {
           <h2 className="font-sans font-bold text-2xl text-[#3a3226] mb-12">작가 소개</h2>
 
           <div className="flex flex-col md:flex-row items-center md:items-stretch gap-12 md:gap-16">
-            <div className="w-full md:flex-1 text-left text-[#3a3226]">
+            <div className="order-2 md:order-1 w-full md:flex-1 text-left text-[#3a3226]">
               <p className="font-bold text-3xl sm:text-4xl tracking-[0.25em] mb-3">
                 김 진 순
               </p>
@@ -164,9 +164,9 @@ function About() {
               </div>
             </div>
 
-            <div className="hidden md:block w-px bg-[#c9bb9e] self-stretch my-4" />
+            <div className="order-2 hidden md:block w-px bg-[#c9bb9e] self-stretch my-4" />
 
-            <div className="w-full md:basis-[40%] md:shrink-0 flex justify-center md:justify-end items-center">
+            <div className="order-1 md:order-3 w-full md:basis-[40%] md:shrink-0 flex justify-center md:justify-end items-center">
               <img
                 src={street}
                 alt="더 릴리풋 컬렉션"
