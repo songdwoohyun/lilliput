@@ -24,12 +24,14 @@ const houseImages = {
 }
 
 function MapHotspot({ hotspot, onClick }) {
+  const interactive = Boolean(onClick)
+
   return (
     <motion.div
       onClick={onClick}
-      whileHover={{ scale: 1.1 }}
+      whileHover={interactive ? { scale: 1.1 } : undefined}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className="absolute cursor-pointer"
+      className={`absolute ${interactive ? 'cursor-pointer' : 'cursor-default'}`}
       style={{
         left: `${hotspot.x}%`,
         top: `${hotspot.y}%`,

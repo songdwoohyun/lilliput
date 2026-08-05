@@ -63,7 +63,7 @@ function SecondFloor() {
             <MapHotspot
               key={`${h.id}-${i}`}
               hotspot={h}
-              onClick={() => setSelected(findArtwork(h.id))}
+              onClick={h.id === 'christmas' ? undefined : () => setSelected(findArtwork(h.id))}
             />
           ))}
         </div>
