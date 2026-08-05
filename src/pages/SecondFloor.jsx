@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import artworks from '../data/artworks.json'
 import hotspots from '../data/mapHotspots.json'
 import MapHotspot from '../components/gallery/MapHotspot'
@@ -18,8 +19,15 @@ const artworksWithImages = artworks.map((artwork) => ({
 
 function SecondFloor() {
   const [selected, setSelected] = useState(null)
+  const [showScrollHint, setShowScrollHint] = useState(true)
 
   const findArtwork = (id) => artworksWithImages.find((a) => a.id === id)
+
+  const handleMapScroll = (e) => {
+    if (showScrollHint && e.currentTarget.scrollLeft > 12) {
+      setShowScrollHint(false)
+    }
+  }
 
   return (
     <div className="bg-[#f0e4d3]">
@@ -40,20 +48,41 @@ function SecondFloor() {
         ← 1F
       </Link>
 
-      <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw]">
-        <img
-          src={mapImage}
-          alt="2층 전시 지도"
-          className="w-full h-auto select-none"
-          draggable={false}
-        />
-        {hotspots.map((h, i) => (
-          <MapHotspot
-            key={`${h.id}-${i}`}
-            hotspot={h}
-            onClick={() => setSelected(findArtwork(h.id))}
+      <div
+        className="relative w-screen left-1/2 right-1/2 -mx-[50vw] overflow-x-auto"
+        onScroll={handleMapScroll}
+      >
+        <div className="relative w-full min-w-[1100px]">
+          <img
+            src={mapImage}
+            alt="2층 전시 지도"
+            className="w-full h-auto select-none"
+            draggable={false}
           />
-        ))}
+          {hotspots.map((h, i) => (
+            <MapHotspot
+              key={`${h.id}-${i}`}
+              hotspot={h}
+              onClick={() => setSelected(findArtwork(h.id))}
+            />
+          ))}
+        </div>
+
+        <div className="sticky left-0 top-4 z-30 w-0 md:hidden pointer-events-none">
+          <AnimatePresence>
+            {showScrollHint && (
+              <motion.div
+                initial={{ opacity: 0, x: -8 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="ml-4 inline-flex items-center whitespace-nowrap rounded-full bg-[#4a5943]/90 px-3 py-1.5 text-xs text-[#f0e4d3] shadow-md"
+              >
+                옆으로 스크롤하며 둘러보세요 →
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
 
       <ArtworkModal artwork={selected} onClose={() => setSelected(null)} />
