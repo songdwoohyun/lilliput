@@ -4,12 +4,22 @@ import artworks from '../data/artworks.json'
 import hotspots from '../data/mapHotspots.json'
 import MapHotspot from '../components/gallery/MapHotspot'
 import ArtworkModal from '../components/gallery/ArtworkModal'
-import mapImage from '../assets/illustrations/exhibition-map-2f.jpg'
+import mapImage from '../assets/illustrations/exhibition-map-2f-shelf.jpg'
+
+const houseImageModules = import.meta.glob('../assets/illustrations/houses/*.png', {
+  eager: true,
+  import: 'default',
+})
+
+const artworksWithImages = artworks.map((artwork) => ({
+  ...artwork,
+  image: houseImageModules[`../assets/illustrations/houses/${artwork.id}.png`] || artwork.image,
+}))
 
 function SecondFloor() {
   const [selected, setSelected] = useState(null)
 
-  const findArtwork = (id) => artworks.find((a) => a.id === id)
+  const findArtwork = (id) => artworksWithImages.find((a) => a.id === id)
 
   return (
     <div className="bg-[#f0e4d3]">
@@ -37,9 +47,9 @@ function SecondFloor() {
           className="w-full h-auto select-none"
           draggable={false}
         />
-        {hotspots.map((h) => (
+        {hotspots.map((h, i) => (
           <MapHotspot
-            key={h.id}
+            key={`${h.id}-${i}`}
             hotspot={h}
             onClick={() => setSelected(findArtwork(h.id))}
           />

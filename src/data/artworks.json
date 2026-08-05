@@ -86,5 +86,77 @@
     "year": "2022",
     "description": "\"우측 하단 손잡이를 오른쪽으로 돌려보세요\"",
     "image": ""
+  },
+  {
+    "id": "bedroom-1",
+    "title": "Bedroom I",
+    "titleEn": "Bedroom I",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "bedroom-2",
+    "title": "Bedroom II",
+    "titleEn": "Bedroom II",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "christmas",
+    "title": "크리스마스",
+    "titleEn": "Christmas",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "le-corbusiers-cabin",
+    "title": "르코르뷔지에의 오두막",
+    "titleEn": "Le Corbusier's Cabin",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "barbizon-garden",
+    "title": "바르비종의 화원",
+    "titleEn": "The Garden of Barbizon",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "tasha-tudors-cabin",
+    "title": "타샤 튜더의 오두막",
+    "titleEn": "Tasha Tudor's Cabin",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "carl-larssons-cabin",
+    "title": "칼라르손의 오두막",
+    "titleEn": "Carl Larsson's Cabin",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "ones-own-cabin",
+    "title": "자기만의 오두막",
+    "titleEn": "A Cabin of One's Own",
+    "year": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "id": "lilliput-1",
+    "title": "릴리풋 I",
+    "titleEn": "Lilliput I",
+    "year": "",
+    "description": "",
+    "image": ""
   }
 ]
