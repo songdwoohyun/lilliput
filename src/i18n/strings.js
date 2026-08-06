@@ -48,6 +48,8 @@ export const strings = {
     },
     visit: {
       title: '오시는 길',
+      weekday: '평일',
+      weekend: '주말',
       closed: '연중무휴',
       directions: '지도 앱에서 길찾기 →',
       mapTitle: '찾아오시는 길 지도',
@@ -106,6 +108,8 @@ export const strings = {
     },
     visit: {
       title: 'How to Find Us',
+      weekday: 'Weekdays',
+      weekend: 'Weekends',
       closed: 'Open all year',
       directions: 'Find directions in Maps app →',
       mapTitle: 'Map to our location',
@@ -164,6 +168,8 @@ export const strings = {
     },
     visit: {
       title: 'アクセス',
+      weekday: '平日',
+      weekend: '週末',
       closed: '年中無休',
       directions: '地図アプリで道案内 →',
       mapTitle: 'アクセスマップ',

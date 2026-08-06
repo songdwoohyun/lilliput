@@ -36,7 +36,10 @@ function Visit() {
             </div>
             <div>
               <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">HOURS</dt>
-              <dd className="text-[#3a3226]">10:00 ~ 19:00</dd>
+              <dd className="text-[#3a3226] space-y-0.5">
+                <p>{t.visit.weekday} 13:00 ~ 19:00</p>
+                <p>{t.visit.weekend} 11:00 ~ 20:00</p>
+              </dd>
             </div>
             <div>
               <dt className="text-xs text-[#8a7d63] tracking-widest mb-1">CLOSED</dt>
