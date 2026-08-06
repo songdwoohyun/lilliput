@@ -17,6 +17,7 @@ export const strings = {
     },
     secondFloor: {
       intro: '예약제 돌하우스 특별 전시입니다.',
+      reservationBtn: '예약하러 가기 →',
       hint: '집 그림 위에 마우스를 올리거나 클릭해서 작품 설명을 확인해보세요.',
       scrollHint: '옆으로 스크롤하며 둘러보세요 →',
     },
@@ -27,6 +28,7 @@ export const strings = {
       soloTitle: '개인전',
       groupTitle: '단체전',
       guidelinesTitle: '관람 안내',
+      guidelinesNote: '2층 관람 시 주의사항',
       credentials: [
         '돌하우스월드 전문가과정 수료',
         '한국미니어처작가협회 강사인증',
@@ -69,6 +71,7 @@ export const strings = {
     },
     secondFloor: {
       intro: 'A reservation-based special dollhouse exhibition.',
+      reservationBtn: 'Make a Reservation →',
       hint: 'Hover over or click a house illustration to view its description.',
       scrollHint: 'Scroll sideways to explore →',
     },
@@ -79,6 +82,7 @@ export const strings = {
       soloTitle: 'Solo Exhibitions',
       groupTitle: 'Group Exhibitions',
       guidelinesTitle: 'Visitor Guidelines',
+      guidelinesNote: 'Notes for Viewing the 2F Exhibition',
       credentials: [
         'Completed Dollhouse World Professional Course',
         'Certified Instructor, Korea Miniature Artists Association',
@@ -125,6 +129,7 @@ export const strings = {
     },
     secondFloor: {
       intro: '予約制のドールハウス特別展示です。',
+      reservationBtn: '予約はこちら →',
       hint: '家のイラストにマウスを乗せるかクリックして、作品説明をご確認ください。',
       scrollHint: '横にスクロールしてご覧ください →',
     },
@@ -135,6 +140,7 @@ export const strings = {
       soloTitle: '個展',
       groupTitle: 'グループ展',
       guidelinesTitle: '鑑賞ガイド',
+      guidelinesNote: '2階鑑賞時の注意事項',
       credentials: [
         'ドールハウスワールド プロフェッショナルコース修了',
         '韓国ミニチュア作家協会 講師認定',

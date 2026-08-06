@@ -17,7 +17,6 @@ const houseImages = {
   'memory-garden': new URL('../../assets/illustrations/houses/memory-garden.png', import.meta.url).href,
   'bedroom-1': new URL('../../assets/illustrations/houses/bedroom-1.png', import.meta.url).href,
   'bedroom-2': new URL('../../assets/illustrations/houses/bedroom-2.png', import.meta.url).href,
-  'christmas': new URL('../../assets/illustrations/houses/christmas.png', import.meta.url).href,
   'le-corbusiers-cabin': new URL('../../assets/illustrations/houses/le-corbusiers-cabin.png', import.meta.url).href,
   'barbizon-garden': new URL('../../assets/illustrations/houses/barbizon-garden.png', import.meta.url).href,
   'tasha-tudors-cabin': new URL('../../assets/illustrations/houses/tasha-tudors-cabin.png', import.meta.url).href,
