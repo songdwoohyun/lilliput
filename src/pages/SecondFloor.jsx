@@ -83,20 +83,22 @@ function SecondFloor() {
           ))}
         </div>
 
-        <div className="sticky left-0 top-4 z-30 w-0 md:hidden pointer-events-none">
-          <AnimatePresence>
-            {showScrollHint && (
-              <motion.div
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="ml-4 inline-flex items-center whitespace-nowrap rounded-full bg-[#4a5943]/90 px-3 py-1.5 text-xs text-[#f0e4d3] shadow-md"
-              >
-                {t.secondFloor.scrollHint}
-              </motion.div>
-            )}
-          </AnimatePresence>
+        <div className="absolute inset-0 z-30 md:hidden pointer-events-none">
+          <div className="sticky left-0 top-4">
+            <AnimatePresence>
+              {showScrollHint && (
+                <motion.div
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="ml-4 inline-flex items-center whitespace-nowrap rounded-full bg-[#4a5943]/90 px-3 py-1.5 text-xs text-[#f0e4d3] shadow-md"
+                >
+                  {t.secondFloor.scrollHint}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
 
