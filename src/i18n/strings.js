@@ -19,6 +19,7 @@ export const strings = {
       intro: '예약제 돌하우스 특별 전시입니다.',
       reservationBtn: '예약하러 가기 →',
       hint: '집 그림 위에 마우스를 올리거나 클릭해서 작품 설명을 확인해보세요.',
+      hintMobile: '작품을 눌러서 작품 설명을 확인해보세요.',
       scrollHint: '옆으로 스크롤하며 둘러보세요 →',
     },
     about: {
@@ -75,6 +76,7 @@ export const strings = {
       intro: 'A reservation-based special dollhouse exhibition.',
       reservationBtn: 'Make a Reservation →',
       hint: 'Hover over or click a house illustration to view its description.',
+      hintMobile: 'Tap a house illustration to view its description.',
       scrollHint: 'Scroll sideways to explore →',
     },
     about: {
@@ -135,6 +137,7 @@ export const strings = {
       intro: '予約制のドールハウス特別展示です。',
       reservationBtn: '予約はこちら →',
       hint: '家のイラストにマウスを乗せるかクリックして、作品説明をご確認ください。',
+      hintMobile: '家のイラストをタップして、作品説明をご確認ください。',
       scrollHint: '横にスクロールしてご覧ください →',
     },
     about: {

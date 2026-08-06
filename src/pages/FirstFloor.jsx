@@ -64,6 +64,18 @@ function Lightbox({ image, onClose }) {
             onClick={(e) => e.stopPropagation()}
             className="max-w-full max-h-[90vh] object-contain shadow-2xl cursor-default"
           />
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation()
+              onClose()
+            }}
+            aria-label="닫기"
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#3a3226]/90 flex items-center justify-center text-white text-2xl leading-none shadow-lg"
+          >
+            ✕
+          </button>
         </motion.div>
       )}
     </AnimatePresence>
