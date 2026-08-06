@@ -52,6 +52,9 @@ function SecondFloor() {
         >
           {t.secondFloor.reservationBtn}
         </a>
+        <p className="text-[#8a7d63] text-sm">
+          {t.secondFloor.mapLabel}
+        </p>
         <p className="text-[#8a7d63] text-sm sm:hidden">
           {t.secondFloor.hintMobile}
         </p>
