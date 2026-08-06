@@ -12,7 +12,7 @@ function ExhibitionSection({ title, items }) {
         {items.map((item, i) => (
           <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6">
             <span className="text-[12.1px] sm:text-[16px] text-[#4a5943] font-semibold italic sm:w-20 sm:shrink-0">{item.date}</span>
-            <span className="text-[12.1px] sm:text-[16px] text-[#3a3226] leading-relaxed">{item.title}</span>
+            <span className="text-[12.1px] sm:text-[16px] text-[#3a3226] leading-relaxed [text-wrap:pretty]">{item.title}</span>
           </div>
         ))}
       </div>
