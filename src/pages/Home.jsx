@@ -34,7 +34,7 @@ function Home() {
   const t = useStrings(lang)
 
   return (
-    <div className="min-h-screen bg-[#f0e4d3] flex items-center justify-center">
+    <div className="min-h-screen bg-[#f0e4d3] flex flex-col items-center justify-center">
       <div className="w-full max-w-7xl px-6 py-16 flex flex-col sm:flex-row items-center justify-center gap-10">
         <FloorCard to="/first-floor" image={shelf} label="1F" alt={t.home.floor1Alt} />
         <FloorCard to="/second-floor" image={library} label="2F" alt={t.home.floor2Alt} />
@@ -47,6 +47,9 @@ function Home() {
           {t.secondFloor.reservationBtn}
         </a>
       </div>
+      <p className="text-[#a89b7d] text-xs text-center px-6 pb-10">
+        {t.home.copyright}
+      </p>
     </div>
   )
 }
