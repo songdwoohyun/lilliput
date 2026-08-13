@@ -54,19 +54,6 @@ function ArtworkModal({ artwork, onClose }) {
                 ✕
               </button>
             </div>
-            <div className="aspect-video bg-[#e8ddc7] flex items-center justify-center overflow-hidden">
-              {artwork.image ? (
-                <motion.img
-                  layoutId={`image-${artwork.id}`}
-                  src={artwork.image}
-                  alt={localized.title}
-                  transition={{ layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } }}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <span className="text-[#a89b7d] text-sm">{t.modal.imagePending}</span>
-              )}
-            </div>
             <div className="p-8">
               <h2 className="font-serif text-2xl text-[#3a3226]">{localized.title}</h2>
               {localized.subtitle && (
