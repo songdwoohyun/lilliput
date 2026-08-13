@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light only;
+  color-scheme: light dark;
 }
 
 html,
 body {
   background-color: #f0e4d3;
   color: #3a3226;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #f0e4d3;
+    color: #3a3226;
+  }
 }
 
 .font-vintage {
