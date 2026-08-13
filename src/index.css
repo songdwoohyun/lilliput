@@ -13,9 +13,26 @@ body {
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    background-color: #f0e4d3;
-    color: #3a3226;
+    background-color: #1c1712;
+    color: #ede1cd;
   }
+
+  .bg-\[\#f0e4d3\] { background-color: #1c1712; }
+  .bg-\[\#e8ddc7\] { background-color: #26201a; }
+  .bg-\[\#FFFDF9\] { background-color: #201a13; }
+  .bg-\[\#faf6ee\] { background-color: #2a231b; }
+  .bg-\[\#c9bb9e\] { background-color: #4a4030; }
+
+  .text-\[\#3a3226\] { color: #ede1cd; }
+  .text-\[\#8a7d63\] { color: #b5a688; }
+  .text-\[\#a89b7d\] { color: #9c8f72; }
+  .text-\[\#5a5040\] { color: #d9cbb0; }
+  .text-\[\#4a5943\] { color: #7fa377; }
+
+  .border-\[\#3a3226\] { border-color: #6b5f4a; }
+  .border-\[\#c9bb9e\] { border-color: #4a4030; }
+
+  .hover\:text-\[\#3a3226\]:hover { color: #ede1cd; }
 }
 
 .font-vintage {
