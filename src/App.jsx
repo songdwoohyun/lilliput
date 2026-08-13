@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import FirstFloor from './pages/FirstFloor'
 import SecondFloor from './pages/SecondFloor'
+import Guide from './pages/Guide'
 import About from './pages/About'
 import Visit from './pages/Visit'
 import Navbar from './components/layout/Navbar'
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/first-floor" element={<FirstFloor />} />
           <Route path="/second-floor" element={<SecondFloor />} />
+          <Route path="/guide" element={<Guide />} />
           <Route path="/about" element={<About />} />
           <Route path="/visit" element={<Visit />} />
         </Routes>

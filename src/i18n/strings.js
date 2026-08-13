@@ -63,6 +63,10 @@ export const strings = {
       close: '✕ 닫기',
       imagePending: '이미지 준비 중',
     },
+    guide: {
+      title: '전시 관람 가이드',
+      subtitle: 'GUIDE',
+    },
   },
   en: {
     home: {
@@ -126,6 +130,10 @@ export const strings = {
       close: '✕ Close',
       imagePending: 'Image coming soon',
     },
+    guide: {
+      title: 'Exhibition Guide',
+      subtitle: 'GUIDE',
+    },
   },
   ja: {
     home: {
@@ -188,6 +196,10 @@ export const strings = {
     modal: {
       close: '✕ 閉じる',
       imagePending: '画像準備中',
+    },
+    guide: {
+      title: '展示ガイド',
+      subtitle: 'GUIDE',
     },
   },
 }
