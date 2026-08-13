@@ -44,6 +44,16 @@ function ArtworkModal({ artwork, onClose }) {
             transition={{ layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } }}
             className="bg-[#faf6ee] max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-sm shadow-2xl"
           >
+            <div className="sticky top-3 z-10 h-0 flex justify-end pr-3">
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label={t.modal.close}
+                className="w-9 h-9 rounded-full bg-[#3a3226]/90 flex items-center justify-center text-white text-lg leading-none shadow-lg"
+              >
+                ✕
+              </button>
+            </div>
             <div className="aspect-video bg-[#e8ddc7] flex items-center justify-center overflow-hidden">
               {artwork.image ? (
                 <motion.img
