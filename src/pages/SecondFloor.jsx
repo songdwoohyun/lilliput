@@ -43,7 +43,7 @@ function SecondFloor() {
         ← 1F
       </Link>
 
-      <ExhibitionMap />
+      <ExhibitionMap showDescription={false} />
 
       <VisitorGuidelines />
     </div>

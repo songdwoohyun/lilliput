@@ -24,7 +24,7 @@ function localize(artwork, lang) {
   }
 }
 
-function ArtworkModal({ artwork, onClose }) {
+function ArtworkModal({ artwork, onClose, showDescription = true }) {
   const { lang } = useLanguage()
   const t = useStrings(lang)
   const localized = localize(artwork, lang)
@@ -65,9 +65,11 @@ function ArtworkModal({ artwork, onClose }) {
               {localized.year && (
                 <p className="text-xs text-[#a89b7d] mt-2 tracking-widest">{localized.year}</p>
               )}
-              <p className="text-[#5a5040] leading-relaxed mt-6 whitespace-pre-line">
-                {localized.description}
-              </p>
+              {showDescription && (
+                <p className="text-[#5a5040] leading-relaxed mt-6 whitespace-pre-line">
+                  {localized.description}
+                </p>
+              )}
               <button
                 onClick={onClose}
                 className="mt-8 text-sm text-[#8a7d63] hover:text-[#3a3226] transition-colors duration-300"

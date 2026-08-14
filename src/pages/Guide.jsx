@@ -20,7 +20,7 @@ function Guide() {
         </p>
       </div>
 
-      <ExhibitionMap />
+      <ExhibitionMap showDescription={true} />
 
       <VisitorGuidelines />
     </div>

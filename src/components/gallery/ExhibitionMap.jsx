@@ -18,7 +18,7 @@ const artworksWithImages = artworks.map((artwork) => ({
   image: houseImageModules[`../../assets/illustrations/houses/${artwork.id}.png`] || artwork.image,
 }))
 
-function ExhibitionMap() {
+function ExhibitionMap({ showDescription = true }) {
   const [selected, setSelected] = useState(null)
   const [showScrollHint, setShowScrollHint] = useState(true)
   const { lang } = useLanguage()
@@ -73,7 +73,7 @@ function ExhibitionMap() {
         </div>
       </div>
 
-      <ArtworkModal artwork={selected} onClose={() => setSelected(null)} />
+      <ArtworkModal artwork={selected} onClose={() => setSelected(null)} showDescription={showDescription} />
     </>
   )
 }
