@@ -37,7 +37,7 @@ function SecondFloor() {
 
       <VisitorGuidelines showPrivateRoomNote />
 
-      <div className="text-center pt-16 pb-10 px-4">
+      <div className="text-center pt-14 sm:pt-16 pb-10 px-4">
         <p className="text-[#8a7d63] text-sm">
           {t.secondFloor.mapLabel}
         </p>
