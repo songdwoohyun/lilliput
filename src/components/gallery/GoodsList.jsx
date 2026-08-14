@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import goods from '../../data/goods.json'
 import Lightbox from './Lightbox'
+import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 const categoryImageModules = import.meta.glob('../../assets/goods/*/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
@@ -28,6 +29,8 @@ const goodsWithImages = goods.map((item) => ({
 }))
 
 function CategoryGalleryModal({ category, onClose, onSelectImage }) {
+  useLockBodyScroll(Boolean(category))
+
   return (
     <AnimatePresence>
       {category && (
@@ -44,6 +47,7 @@ function CategoryGalleryModal({ category, onClose, onSelectImage }) {
             animate={{ scale: 1 }}
             exit={{ scale: 0.96 }}
             transition={{ duration: 0.25 }}
+            data-scroll-lock-allow
             className="bg-[#faf6ee] max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-sm shadow-2xl p-6 sm:p-8"
           >
             <div className="grid grid-cols-3 gap-2 sm:gap-4">
@@ -80,11 +84,11 @@ function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery }) {
   const hasImages = item.images.length > 0
 
   return (
-    <div className="py-6 flex gap-4 sm:gap-6 items-start">
+    <div className="py-6 flex gap-4 sm:gap-6">
       <button
         type="button"
         onClick={() => hasImages && onOpenGallery(item)}
-        className={`w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square overflow-hidden bg-[#e8ddc7] rounded-sm ${hasImages ? 'cursor-pointer' : 'cursor-default'}`}
+        className={`w-24 h-24 sm:w-32 sm:h-32 shrink-0 self-start aspect-square overflow-hidden bg-[#e8ddc7] rounded-sm ${hasImages ? 'cursor-pointer' : 'cursor-default'}`}
       >
         {hasImages ? (
           <img
@@ -103,7 +107,7 @@ function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery }) {
       <button
         type="button"
         onClick={onToggleExpand}
-        className="text-left flex-1"
+        className="relative text-left flex-1 pb-8 flex flex-col justify-start"
       >
         <p className="whitespace-pre-line text-[#3a3226] leading-relaxed">{item.summary}</p>
         <div
@@ -116,6 +120,17 @@ function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery }) {
             </p>
           </div>
         </div>
+
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`absolute bottom-0 right-0 text-[#8a7d63] transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+        >
+          <path d="M5 9l7 7 7-7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </button>
     </div>
   )

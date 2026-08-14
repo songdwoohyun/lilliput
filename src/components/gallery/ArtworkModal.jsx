@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { useStrings } from '../../i18n/strings'
+import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 function localize(artwork, lang) {
   if (!artwork) return artwork
@@ -27,6 +28,7 @@ function ArtworkModal({ artwork, onClose }) {
   const { lang } = useLanguage()
   const t = useStrings(lang)
   const localized = localize(artwork, lang)
+  useLockBodyScroll(Boolean(artwork))
 
   return (
     <AnimatePresence>
@@ -42,6 +44,7 @@ function ArtworkModal({ artwork, onClose }) {
             layoutId={`card-${artwork.id}`}
             onClick={(e) => e.stopPropagation()}
             transition={{ layout: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } }}
+            data-scroll-lock-allow
             className="bg-[#faf6ee] max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-sm shadow-2xl"
           >
             <div className="sticky top-3 z-10 h-0 flex justify-end pr-3">

@@ -1,6 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 function Lightbox({ image, onClose }) {
+  useLockBodyScroll(Boolean(image))
+
   return (
     <AnimatePresence>
       {image && (
