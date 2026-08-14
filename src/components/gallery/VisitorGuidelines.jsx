@@ -30,20 +30,42 @@ const guidelineIcons = [
   </svg>,
 ]
 
-function VisitorGuidelines() {
+const PRIVATE_ROOM_NOTE = `계단을 따라 올라오시면 펼쳐지는 2층의 아늑한 5평 공간은,
+오롯이 당신만을 위해 준비된 프라이빗 전시실입니다.
+
+작품 하나하나에 담긴 이야기와 디테일을 더욱 깊이 있게 전달해 드리고자,
+회차당 단 1팀(1인~최대 2인)만을 모시는 100% 사전 예약제로 운영됩니다.
+
+관람 시간: 40분
+정원: 회차당 1~2인
+
+바쁜 일상에서 벗어나 40분 동안 아무런 방해 없이,
+작품 속 세상에 깊이 몰입해보는 시간을 선물합니다.`
+
+function VisitorGuidelines({ showPrivateRoomNote = false }) {
   const { lang } = useLanguage()
   const t = useStrings(lang)
 
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#e8ddc7] py-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-14">
+    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-[#f0e4d3] py-20 px-6">
+      <div className="max-w-2xl mx-auto bg-[#faf6ee] rounded-sm shadow-lg px-6 py-12 sm:px-12 sm:py-16">
+        <div className="text-center">
           <h2 className="text-2xl text-[#3a3226] mb-1">{t.about.guidelinesTitle}</h2>
           {lang !== 'en' && <p className="text-sm text-[#8a7d63] tracking-widest">VISITOR GUIDELINES</p>}
-          <p className="text-sm text-[#3a3226] mt-4">{t.about.guidelinesNote}</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6">
+        {showPrivateRoomNote && (
+          <div className="max-w-2xl mx-auto text-center mt-10">
+            <h3 className="text-lg font-semibold text-[#3a3226] mb-4">2F 프라이빗 전시실 안내</h3>
+            <p className="text-[#5a5040] leading-relaxed whitespace-pre-line">{PRIVATE_ROOM_NOTE}</p>
+          </div>
+        )}
+
+        <div className="max-w-xs mx-auto border-t border-[#c9bb9e] mt-10" />
+
+        <p className="text-lg font-semibold text-[#3a3226] text-center mt-10 mb-14">{t.about.guidelinesNote}</p>
+
+        <div className="grid grid-cols-2 gap-y-12 gap-x-6 max-w-md mx-auto">
           {t.about.guidelines.map((label, i) => (
             <div key={i} className="flex flex-col items-center text-center gap-4">
               <div className="text-[#4a5943]">{guidelineIcons[i]}</div>

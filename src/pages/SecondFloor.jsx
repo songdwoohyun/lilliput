@@ -22,10 +22,22 @@ function SecondFloor() {
           href={reservationUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#4a5943] text-[#f0e4d3] px-8 py-3 rounded-sm text-sm tracking-widest hover:bg-[#3a4636] transition-colors duration-300 mb-10"
+          className="inline-block bg-[#4a5943] text-[#f0e4d3] px-8 py-3 rounded-sm text-sm tracking-widest hover:bg-[#3a4636] transition-colors duration-300"
         >
           {t.secondFloor.reservationBtn}
         </a>
+      </div>
+
+      <Link
+        to="/first-floor"
+        className="fixed top-24 left-6 z-40 bg-[#4a5943] text-[#f0e4d3] text-xs tracking-widest px-4 py-2 rounded-sm hover:bg-[#3a4636] transition-colors duration-300 shadow-md"
+      >
+        ← 1F
+      </Link>
+
+      <VisitorGuidelines showPrivateRoomNote />
+
+      <div className="text-center pt-16 pb-10 px-4">
         <p className="text-[#8a7d63] text-sm">
           {t.secondFloor.mapLabel}
         </p>
@@ -36,16 +48,8 @@ function SecondFloor() {
           {t.secondFloor.hint}
         </p>
       </div>
-      <Link
-        to="/first-floor"
-        className="fixed top-24 left-6 z-40 bg-[#4a5943] text-[#f0e4d3] text-xs tracking-widest px-4 py-2 rounded-sm hover:bg-[#3a4636] transition-colors duration-300 shadow-md"
-      >
-        ← 1F
-      </Link>
 
       <ExhibitionMap showDescription={false} />
-
-      <VisitorGuidelines />
     </div>
   )
 }
