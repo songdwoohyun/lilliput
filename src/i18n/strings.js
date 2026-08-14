@@ -22,6 +22,8 @@ export const strings = {
       mapLabel: '2층 전시 맵입니다.',
       hint: '작품을 클릭해서 작품 설명을 확인해보세요.',
       hintMobile: '작품을 눌러서 작품 설명을 확인해보세요.',
+      mapLabelPublic: '2층 전시맵입니다.',
+      hintPublic: '작품을 누르면 제목과 제작년도를 볼 수 있습니다.',
       scrollHint: '옆으로 스크롤하며 둘러보세요 →',
     },
     about: {
@@ -85,6 +87,8 @@ export const strings = {
       mapLabel: 'This is the 2F exhibition map.',
       hint: 'Click an artwork to view its description.',
       hintMobile: 'Tap a house illustration to view its description.',
+      mapLabelPublic: 'This is the 2F exhibition map.',
+      hintPublic: 'Tap an artwork to see its title and year.',
       scrollHint: 'Scroll sideways to explore →',
     },
     about: {
@@ -152,6 +156,8 @@ export const strings = {
       mapLabel: '2階の展示マップです。',
       hint: '作品をクリックして、作品説明をご確認ください。',
       hintMobile: '家のイラストをタップして、作品説明をご確認ください。',
+      mapLabelPublic: '2階の展示マップです。',
+      hintPublic: '作品をタップすると、タイトルと制作年をご覧いただけます。',
       scrollHint: '横にスクロールしてご覧ください →',
     },
     about: {
