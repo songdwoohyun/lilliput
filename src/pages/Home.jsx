@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import library from '../assets/illustrations/home/library.jpg'
 import shelf from '../assets/illustrations/home/shelf.jpg'
@@ -35,6 +36,13 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-[#f0e4d3] flex flex-col items-center justify-center">
+      <Helmet>
+        <title>더 릴리풋 컬렉션 | 수원 미니어처 공방</title>
+        <meta
+          name="description"
+          content="경기 수원시 팔달구에 위치한 돌하우스 미니어처 공방, 더 릴리풋 컬렉션입니다. 1층 오픈 갤러리에서는 작품 상설 전시와 에코백·윙체어 등 오리지널 굿즈를, 2층 프라이빗 전시실에서는 예약제로 진행되는 특별한 미니어처 작품을 만나보실 수 있습니다."
+        />
+      </Helmet>
       <div className="w-full max-w-7xl px-6 py-16 flex flex-col sm:flex-row items-center justify-center gap-10">
         <FloorCard to="/first-floor" image={shelf} label="1F" alt={t.home.floor1Alt} />
         <FloorCard to="/second-floor" image={library} label="2F" alt={t.home.floor2Alt} />

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 
@@ -10,6 +11,13 @@ function Visit() {
 
   return (
     <div className="min-h-screen bg-[#f0e4d3]">
+      <Helmet>
+        <title>방문 안내 및 오시는 길 | 더 릴리풋 컬렉션</title>
+        <meta
+          name="description"
+          content="더 릴리풋 컬렉션 방문을 위한 주소와 평일·주말 운영시간, 연중무휴 안내, 예약 방법을 확인하세요. 경기 수원시 팔달구 화서문로에 위치해 있으며, 네이버 예약을 통해 2층 프라이빗 전시를 미리 예약하실 수 있습니다."
+        />
+      </Helmet>
       <div className="text-center pt-16 pb-10 px-4">
         <h1 className="text-4xl font-serif text-[#3a3226] mb-2">{t.visit.title}</h1>
         <p className="text-[#8a7d63] text-sm tracking-widest">VISIT · RESERVATION</p>

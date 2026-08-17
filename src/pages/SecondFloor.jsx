@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import ExhibitionMap from '../components/gallery/ExhibitionMap'
 import VisitorGuidelines from '../components/gallery/VisitorGuidelines'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -12,6 +13,13 @@ function SecondFloor() {
 
   return (
     <div className="bg-[#f0e4d3]">
+      <Helmet>
+        <title>2층 전시 안내 | 더 릴리풋 컬렉션</title>
+        <meta
+          name="description"
+          content="더 릴리풋 컬렉션 2층은 회차당 단 1팀(1~2인)만을 모시는 100% 사전 예약제 프라이빗 전시실입니다. 40분 동안 방해 없이 작품 하나하나에 담긴 이야기와 디테일을 깊이 있게 감상하는 특별한 시간을 예약해보세요."
+        />
+      </Helmet>
       <div className="text-center pt-16 pb-10 px-4">
         <h1 className="text-4xl font-serif text-[#3a3226] mb-2">Private Exhibition Room</h1>
         <p className="text-[#8a7d63] text-sm tracking-widest mb-10">2F</p>

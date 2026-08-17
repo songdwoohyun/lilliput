@@ -1,4 +1,5 @@
 import street from '../assets/illustrations/about/street.jpg'
+import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 import { soloExhibitions, groupExhibitions } from '../i18n/exhibitions'
@@ -26,6 +27,13 @@ function About() {
 
   return (
     <div className="bg-[#f0e4d3] font-vintage">
+      <Helmet>
+        <title>공방 소개 | 더 릴리풋 컬렉션</title>
+        <meta
+          name="description"
+          content="돌하우스 작가 김진순이 지난 19년간 작은 공간으로 삶을 위로하고 확장해온 이야기를 담은 더 릴리풋 컬렉션을 소개합니다. 작가 소개와 개인전·단체전 연혁, 관람 안내를 이 페이지에서 확인해보세요."
+        />
+      </Helmet>
       {/* 작가 소개 섹션 */}
       <div className="px-6 sm:px-10 pt-20 pb-20">
         <div className="max-w-5xl mx-auto">
