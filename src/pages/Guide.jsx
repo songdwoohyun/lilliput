@@ -16,6 +16,7 @@ function Guide() {
           name="description"
           content="현장에서 QR코드로 접속하는 더 릴리풋 컬렉션 2층 전시 관람 가이드 페이지입니다. 전시맵에서 작품을 누르면 제목과 제작년도를 확인할 수 있고, 사진 촬영 금지 등 관람 시 유의사항도 함께 안내합니다."
         />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="text-center pt-16 pb-10 px-4">
         <h1 className="text-4xl font-serif text-[#3a3226] mb-2">{t.guide.title}</h1>
