@@ -58,7 +58,7 @@ export const strings = {
       closed: '연중무휴',
       directions: '지도 앱에서 길찾기 →',
       mapTitle: '찾아오시는 길 지도',
-      reservationNote: '전시 관람은 사전 예약을 권장드립니다.',
+      reservationNote: '2F 전시 관람은 사전 예약해주세요.',
       reservationBtn: '네이버 예약으로 이동',
     },
     modal: {
@@ -127,7 +127,7 @@ export const strings = {
       closed: 'Open all year',
       directions: 'Find directions in Maps app →',
       mapTitle: 'Map to our location',
-      reservationNote: 'We recommend booking your visit in advance.',
+      reservationNote: 'Please book in advance to view the 2F exhibition.',
       reservationBtn: 'Go to Naver Reservation',
     },
     modal: {
@@ -196,7 +196,7 @@ export const strings = {
       closed: '年中無休',
       directions: '地図アプリで道案内 →',
       mapTitle: 'アクセスマップ',
-      reservationNote: '展示のご観覧には事前のご予約をおすすめします。',
+      reservationNote: '2階の展示鑑賞には事前のご予約をお願いいたします。',
       reservationBtn: 'Naver予約へ移動',
     },
     modal: {
