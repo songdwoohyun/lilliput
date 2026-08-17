@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
+import NaverMap from '../components/map/NaverMap'
 
 function Visit() {
   const { lang } = useLanguage()
@@ -25,12 +26,11 @@ function Visit() {
 
       {/* 지도 */}
       <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] h-[50vh] min-h-[320px]">
-        <iframe
+        <NaverMap
+          lat={37.2867261}
+          lng={127.0155584}
           title={t.visit.mapTitle}
-          src={`https://maps.google.com/maps?q=${encodeURIComponent(address)}&z=16&output=embed`}
-          className="w-full h-full border-0"
-          loading="lazy"
-          allowFullScreen
+          className="w-full h-full"
         />
       </div>
 
