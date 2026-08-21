@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
-import library from '../assets/illustrations/home/library.jpg'
-import shelf from '../assets/illustrations/home/shelf.jpg'
+import library from '../assets/illustrations/home/library.webp'
+import shelf from '../assets/illustrations/home/shelf.webp'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 
