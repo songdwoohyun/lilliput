@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../../i18n/LanguageContext'
 import { languageNames } from '../../i18n/strings'
+import footerLogo from '../../assets/logo/lilliput-logo-footer.webp'
 
 function LanguageSwitcher() {
   const { lang, setLang } = useLanguage()
@@ -84,9 +85,7 @@ function Footer() {
           <LanguageSwitcher />
         </div>
 
-        <p className="text-[#d8ccb4] text-xs tracking-widest">
-          THE LILLIPUT COLLECTION
-        </p>
+        <img src={footerLogo} alt="THE LILLIPUT COLLECTION" className="h-4 sm:h-5 w-auto" />
         <p className="text-[#8a9481] text-xs text-center">
           {address} · 010-9012-4940
         </p>
