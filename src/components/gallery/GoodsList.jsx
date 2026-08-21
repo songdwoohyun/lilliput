@@ -31,6 +31,12 @@ const goodsWithImages = goods.map((item) => ({
 function CategoryGalleryModal({ category, onClose, onSelectImage }) {
   useLockBodyScroll(Boolean(category))
 
+  // The first image doubles as the row's cover thumbnail, so skip it here
+  // to avoid showing it twice — unless it's the only image available.
+  const galleryImages = category && category.images.length > 1
+    ? category.images.slice(1)
+    : category?.images || []
+
   return (
     <AnimatePresence>
       {category && (
@@ -51,7 +57,7 @@ function CategoryGalleryModal({ category, onClose, onSelectImage }) {
             className="bg-[#faf6ee] max-w-2xl w-full max-h-[85vh] overflow-y-auto rounded-sm shadow-2xl p-6 sm:p-8"
           >
             <div className="grid grid-cols-3 gap-2 sm:gap-4">
-              {category.images.map((src, i) => (
+              {galleryImages.map((src, i) => (
                 <button
                   key={src}
                   type="button"
