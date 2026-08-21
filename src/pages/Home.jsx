@@ -26,7 +26,7 @@ function Home() {
   const t = useStrings(lang)
 
   return (
-    <div className="min-h-screen bg-[#f0e4d3] flex flex-col items-center">
+    <div className="min-h-screen bg-[#f0e4d3]">
       <Helmet>
         <title>더 릴리풋 컬렉션 | 수원 미니어처 공방</title>
         <meta
@@ -61,32 +61,34 @@ function Home() {
         </div>
       </div>
 
-      {/* 소파 아이콘 내비게이션 */}
-      <div className="flex items-center justify-center gap-6 sm:gap-10 px-6 py-10 sm:py-14">
-        <NavIcon to="/first-floor" image={icon1F} alt={t.home.floor1Alt} />
-        <NavIcon to="/second-floor" image={icon2F} alt={t.home.floor2Alt} />
-        <NavIcon to="/about" image={iconAbout} alt={t.home.aboutAlt} />
-        <NavIcon to="/visit" image={iconVisit} alt={t.home.visitAlt} />
+      <div className="flex flex-col items-center">
+        {/* 소파 아이콘 내비게이션 */}
+        <div className="flex items-center justify-center gap-6 sm:gap-10 px-6 py-10 sm:py-14">
+          <NavIcon to="/first-floor" image={icon1F} alt={t.home.floor1Alt} />
+          <NavIcon to="/second-floor" image={icon2F} alt={t.home.floor2Alt} />
+          <NavIcon to="/about" image={iconAbout} alt={t.home.aboutAlt} />
+          <NavIcon to="/visit" image={iconVisit} alt={t.home.visitAlt} />
+        </div>
+
+        {/* 2F 예약하러 가기 */}
+        <a
+          href={reservationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full max-w-2xl px-6 hover:opacity-90 transition-opacity duration-300"
+        >
+          <img
+            src={reserveButton}
+            alt={t.home.reserveAlt}
+            className="w-full h-auto rounded-sm shadow-md"
+            draggable={false}
+          />
+        </a>
+
+        <p className="text-[#a89b7d] text-xs text-center px-6 py-10">
+          {t.home.copyright}
+        </p>
       </div>
-
-      {/* 2F 예약하러 가기 */}
-      <a
-        href={reservationUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block w-full max-w-2xl px-6 hover:opacity-90 transition-opacity duration-300"
-      >
-        <img
-          src={reserveButton}
-          alt={t.home.reserveAlt}
-          className="w-full h-auto rounded-sm shadow-md"
-          draggable={false}
-        />
-      </a>
-
-      <p className="text-[#a89b7d] text-xs text-center px-6 py-10">
-        {t.home.copyright}
-      </p>
     </div>
   )
 }
