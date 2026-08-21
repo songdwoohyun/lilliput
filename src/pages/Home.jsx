@@ -43,7 +43,7 @@ function Home() {
           className="sm:hidden w-full h-auto block"
           draggable={false}
         />
-        <div className="hidden sm:block relative w-full h-[320px] md:h-[380px] lg:h-[440px] overflow-hidden">
+        <div className="hidden sm:block relative w-full h-[580px] md:h-[685px] lg:h-[790px] overflow-hidden">
           <img
             src={heroBg}
             alt=""
