@@ -9,6 +9,10 @@ export const strings = {
     home: {
       floor1Alt: '1층 공간 안내',
       floor2Alt: '2층 공간 안내',
+      aboutAlt: '더 릴리풋 컬렉션 소개',
+      visitAlt: '방문 안내 및 오시는 길',
+      heroAlt: '더 릴리풋 컬렉션 · 돌하우스 갤러리 & 아트샵',
+      reserveAlt: '2F 예약하러 가기',
       copyright: '본 웹사이트의 모든 사진과 작품은 저작권법의 보호를 받으며, 무단 복제 및 상업적 이용을 금합니다.',
     },
     firstFloor: {
@@ -74,6 +78,10 @@ export const strings = {
     home: {
       floor1Alt: '1F Floor Guide',
       floor2Alt: '2F Floor Guide',
+      aboutAlt: 'About The Lilliput Collection',
+      visitAlt: 'Visit & Directions',
+      heroAlt: 'THE LILLIPUT Collection · Dollhouse Gallery & Artshop',
+      reserveAlt: 'Reserve the 2F exhibition',
       copyright: 'All photos and artworks on this website are protected by copyright law. Unauthorized reproduction or commercial use is prohibited.',
     },
     firstFloor: {
@@ -143,6 +151,10 @@ export const strings = {
     home: {
       floor1Alt: '1階フロアガイド',
       floor2Alt: '2階フロアガイド',
+      aboutAlt: 'ザ・リリパット・コレクションについて',
+      visitAlt: 'ご来店案内・アクセス',
+      heroAlt: 'THE LILLIPUT Collection · ドールハウスギャラリー&アートショップ',
+      reserveAlt: '2F予約はこちら',
       copyright: '本ウェブサイト内のすべての写真および作品は著作権法により保護されており、無断複製および商業的利用を禁じます。',
     },
     firstFloor: {

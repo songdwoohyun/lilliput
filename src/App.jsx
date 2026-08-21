@@ -20,12 +20,18 @@ function ScrollToTop() {
   return null
 }
 
+function ConditionalNavbar() {
+  const { pathname } = useLocation()
+  if (pathname === '/') return null
+  return <Navbar />
+}
+
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar />
+        <ConditionalNavbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/first-floor" element={<FirstFloor />} />
