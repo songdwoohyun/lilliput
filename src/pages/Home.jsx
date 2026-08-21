@@ -63,7 +63,7 @@ function Home() {
 
       <div className="flex flex-col items-center">
         {/* 소파 아이콘 내비게이션 */}
-        <div className="flex items-center justify-center gap-6 sm:gap-10 px-6 py-10 sm:py-[84px]">
+        <div className="flex items-center justify-center gap-3 sm:gap-10 px-[6px] sm:px-6 py-10 sm:py-[84px]">
           <NavIcon to="/first-floor" image={icon1F} alt={t.home.floor1Alt} />
           <NavIcon to="/second-floor" image={icon2F} alt={t.home.floor2Alt} />
           <NavIcon to="/about" image={iconAbout} alt={t.home.aboutAlt} />
