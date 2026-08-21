@@ -15,7 +15,7 @@ const reservationUrl = "https://map.naver.com/p/entry/place/1838953160?placePath
 
 function NavIcon({ to, image, alt }) {
   return (
-    <Link to={to} className="shrink-0 hover:opacity-80 transition-opacity duration-300">
+    <Link to={to} className="w-20 sm:w-24 shrink-0 flex justify-center hover:opacity-80 transition-opacity duration-300">
       <img src={image} alt={alt} className="h-20 sm:h-24 w-auto" draggable={false} />
     </Link>
   )
@@ -63,7 +63,7 @@ function Home() {
 
       <div className="flex flex-col items-center">
         {/* 소파 아이콘 내비게이션 */}
-        <div className="flex items-center justify-center gap-6 sm:gap-10 px-6 py-10 sm:py-14">
+        <div className="flex items-center justify-center gap-6 sm:gap-10 px-6 py-10 sm:py-[84px]">
           <NavIcon to="/first-floor" image={icon1F} alt={t.home.floor1Alt} />
           <NavIcon to="/second-floor" image={icon2F} alt={t.home.floor2Alt} />
           <NavIcon to="/about" image={iconAbout} alt={t.home.aboutAlt} />
