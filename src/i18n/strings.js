@@ -6,6 +6,10 @@ export const languageNames = {
 
 export const strings = {
   ko: {
+    common: {
+      comingSoonBtn: '준비중',
+      comingSoonTooltip: '가오픈 기간(8월 말) 중 2F 전시실 무료 오픈입니다.',
+    },
     home: {
       floor1Alt: '1층 공간 안내',
       floor2Alt: '2층 공간 안내',
@@ -75,6 +79,10 @@ export const strings = {
     },
   },
   en: {
+    common: {
+      comingSoonBtn: 'Coming Soon',
+      comingSoonTooltip: 'During our soft-opening period (late August), the 2F exhibition is open free of charge.',
+    },
     home: {
       floor1Alt: '1F Floor Guide',
       floor2Alt: '2F Floor Guide',
@@ -148,6 +156,10 @@ export const strings = {
     },
   },
   ja: {
+    common: {
+      comingSoonBtn: '準備中',
+      comingSoonTooltip: 'プレオープン期間(8月末)中は2F展示室を無料で公開しております。',
+    },
     home: {
       floor1Alt: '1階フロアガイド',
       floor2Alt: '2階フロアガイド',

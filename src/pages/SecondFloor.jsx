@@ -2,10 +2,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ExhibitionMap from '../components/gallery/ExhibitionMap'
 import VisitorGuidelines from '../components/gallery/VisitorGuidelines'
+import ComingSoonButton from '../components/common/ComingSoonButton'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
-
-const reservationUrl = "https://map.naver.com/p/entry/place/1838953160?placePath=%2Finformation%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608022010%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0155584&lat=37.2867261&c=15.00,0,0,0,dh"
 
 function SecondFloor() {
   const { lang } = useLanguage()
@@ -47,14 +46,11 @@ function SecondFloor() {
       <ExhibitionMap showDescription={false} />
 
       <div className="text-center pt-14 sm:pt-16 pb-10 px-4">
-        <a
-          href={reservationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-[#4a5943] text-[#f0e4d3] px-8 py-3 rounded-sm text-sm tracking-widest hover:bg-[#3a4636] transition-colors duration-300"
-        >
-          {t.secondFloor.reservationBtn}
-        </a>
+        <ComingSoonButton>
+          <span className="inline-block bg-[#4a5943] text-[#f0e4d3] opacity-70 px-8 py-3 rounded-sm text-sm tracking-widest">
+            {t.common.comingSoonBtn}
+          </span>
+        </ComingSoonButton>
       </div>
 
       <VisitorGuidelines showPrivateRoomNote />

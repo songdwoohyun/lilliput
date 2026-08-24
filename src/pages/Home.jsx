@@ -8,10 +8,9 @@ import icon2F from '../assets/home/icon2.webp'
 import iconAbout from '../assets/home/icon3.webp'
 import iconVisit from '../assets/home/icon4.webp'
 import reserveButton from '../assets/home/reserve-button-flat.webp'
+import ComingSoonButton from '../components/common/ComingSoonButton'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
-
-const reservationUrl = "https://map.naver.com/p/entry/place/1838953160?placePath=%2Finformation%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202608022010%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0155584&lat=37.2867261&c=15.00,0,0,0,dh"
 
 function NavIcon({ to, image, alt }) {
   return (
@@ -70,20 +69,22 @@ function Home() {
           <NavIcon to="/visit" image={iconVisit} alt={t.home.visitAlt} />
         </div>
 
-        {/* 2F 예약하러 가기 */}
-        <a
-          href={reservationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full max-w-2xl px-6 hover:opacity-90 transition-opacity duration-300"
-        >
-          <img
-            src={reserveButton}
-            alt={t.home.reserveAlt}
-            className="w-full h-auto rounded-sm shadow-md"
-            draggable={false}
-          />
-        </a>
+        {/* 2F 예약하러 가기 (준비중) */}
+        <ComingSoonButton className="block w-full max-w-2xl px-6">
+          <span className="relative block w-full rounded-sm shadow-md overflow-hidden">
+            <img
+              src={reserveButton}
+              alt={t.home.reserveAlt}
+              className="w-full h-auto"
+              draggable={false}
+            />
+            <span className="absolute inset-0 bg-black/55 flex items-center justify-center">
+              <span className="text-white text-lg sm:text-xl tracking-widest font-serif">
+                {t.common.comingSoonBtn}
+              </span>
+            </span>
+          </span>
+        </ComingSoonButton>
 
         <p className="text-[#a89b7d] text-xs text-center px-6 py-10">
           {t.home.copyright}
