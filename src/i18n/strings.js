@@ -8,7 +8,7 @@ export const strings = {
   ko: {
     common: {
       comingSoonBtn: '준비중',
-      comingSoonTooltip: '가오픈 기간(8월 말) 중 2F 전시실 무료 오픈입니다.',
+      comingSoonTooltip: '8월말(가오픈)까지 2F 전시실 무료오픈합니다.',
     },
     home: {
       floor1Alt: '1층 공간 안내',
