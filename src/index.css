@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'BookkGothic';
+  src: url('/fonts/BookkGothic-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BookkGothic';
+  src: url('/fonts/BookkGothic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'BookkGothic', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', 'BookkGothic', Georgia, serif;
+}
+
 :root {
   color-scheme: light only;
 }
@@ -8,9 +29,10 @@ html,
 body {
   background-color: #f0e4d3;
   color: #3a3226;
+  font-weight: 300;
 }
 
 .font-vintage {
-  font-family: 'Cormorant Garamond', 'Nanum Myeongjo', Georgia, serif;
+  font-family: 'Cormorant Garamond', 'BookkGothic', Georgia, serif;
   font-weight: 500;
 }
