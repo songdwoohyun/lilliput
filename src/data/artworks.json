@@ -178,9 +178,11 @@
     "title": "르코르뷔지에의 오두막",
     "titleEn": "Le Corbusier's Cabin",
     "year": "2019",
-    "description": "",
+    "description": "프랑스의 건축가 르 코르뷔지에가 지중해 연안에 지었던 단 4평 크기의 오두막 '카바농(Cabanon)'에서 영감을 받아 제작한 작품입니다.\n\n사람이 살아가는 데 필요한 최소한의 집, \"4평이면 충분히 행복할 수 있다\"고 말한 건축가.\n\n적게 소유할수록 자연은 더 많은 것을 품게 해준다는 깨달음을 준 작품입니다.",
     "image": "",
-    "titleJa": "ル・コルビュジエの小屋"
+    "titleJa": "ル・コルビュジエの小屋",
+    "description_en": "This work was inspired by 'Cabanon,' the mere 13-square-meter cabin that the French architect Le Corbusier built on the Mediterranean coast.\n\nThe smallest house a person needs to live—an architect who said, \"Thirteen square meters is enough to be happy.\"\n\nThis piece brought me the realization that the less we own, the more nature can hold for us.",
+    "description_ja": "フランスの建築家ル・コルビュジエが地中海沿岸に建てた、わずか4坪の小屋『カバノン(Cabanon)』からインスピレーションを受けて制作した作品です。\n\n人が生きていくために必要な最小限の家、『4坪あれば十分に幸せになれる』と語った建築家。\n\n少なく所有するほど、自然はより多くのものを抱かせてくれるという気づきを与えてくれた作品です。"
   },
   {
     "id": "barbizon-garden",
@@ -214,17 +216,21 @@
     "title": "자기만의 오두막",
     "titleEn": "A Cabin of One's Own",
     "year": "2016",
-    "description": "",
+    "description": "오롯이 개인의 취향을 담아낸 작은 아지트입니다. 내가 좋아하는 일(뜨개질, 바느질, 정원 가꾸기 등)에 빠져 오래 머물고 싶은 일상의 안식처입니다.\n\n오두막 벽면과 소파를 가득 채운 알록달록한 블랭킷과 쿠션, 가디건은 실타래에서 실을 한 올씩 분리해 코바늘로 한 땀 한 땀 직접 떠서 완성하였습니다.",
     "image": "",
-    "titleJa": "自分だけの小屋"
+    "titleJa": "自分だけの小屋",
+    "description_en": "A small hideaway that holds one person's taste completely. It is an everyday sanctuary where I wish to linger, absorbed in the things I love—knitting, sewing, tending a garden.\n\nThe colorful blankets, cushions, and cardigan filling the cabin's walls and sofa were finished by hand, separating thread strand by strand from the skein and crocheting them stitch by stitch.",
+    "description_ja": "個人の好みをそのまま込めた小さなアジトです。私が好きなこと（編み物、裁縫、庭仕事など）に没頭して長く過ごしたい、日常の安らぎの場所です。\n\n小屋の壁面とソファを埋め尽くすカラフルなブランケットやクッション、カーディガンは、糸玉から糸を一本ずつほどき、かぎ針で一目一目丁寧に編んで仕上げました。"
   },
   {
     "id": "lilliput-1",
     "title": "릴리풋 I",
     "titleEn": "Lilliput I",
     "year": "2016",
-    "description": "",
+    "description": "2016년 당시, 제 작업실은 5평 남짓한 작은 공간이었습니다. 이 오두막은 꿈꾸던 아지트이자 상상 속 작업실입니다.\n\n'미니어처 속의 미니어처'\n\n실제 제작했던 돌하우스들이 오두막 내부와 창가, 야외 스탠드 위에 초미니어처 크기로 재현되어 있습니다.",
     "image": "",
-    "titleJa": "リリプット I"
+    "titleJa": "リリプット I",
+    "description_en": "In 2016, my studio was a small space of about 5 pyeong. This cabin is the dreamed-of hideaway and imaginary studio I longed for at the time.\n\n'A miniature within a miniature'\n\nThe dollhouses I had actually made are reproduced at ultra-miniature scale inside the cabin, by the window, and on the outdoor stand.",
+    "description_ja": "2016年当時、私のアトリエは5坪ほどの小さな空間でした。この小屋は、夢見ていたアジトであり、想像の中の工房です。\n\n『ミニチュアの中のミニチュア』\n\n実際に制作したドールハウスたちが、小屋の内部や窓辺、屋外のスタンドの上に、極小サイズで再現されています。"
   }
 ]
