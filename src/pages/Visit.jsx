@@ -2,12 +2,12 @@ import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 import NaverMap from '../components/map/NaverMap'
-import ComingSoonButton from '../components/common/ComingSoonButton'
 
 function Visit() {
   const { lang } = useLanguage()
   const t = useStrings(lang)
   const address = "경기 수원시 팔달구 화서문로71번길 21"
+  const reservationUrl = "https://map.naver.com/p/entry/place/1838953160?placePath=%2Fticket%3Fentry%3Dplt%26fromPanelNum%3D1%26additionalHeight%3D76%26timestamp%3D202609011703%26locale%3Dko%26svcName%3Dmap_pcv5&searchType=place&lng=127.0155584&lat=37.2867261&c=15.00,0,0,0,dh"
 
   return (
     <div className="min-h-screen bg-[#f0e4d3]">
@@ -74,11 +74,14 @@ function Visit() {
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-[#d8ccb4] text-sm mb-4">{t.visit.reservationNote}</p>
 
-          <ComingSoonButton>
-            <span className="inline-block bg-[#f0e4d3] text-[#3a3226] opacity-70 px-10 py-4 rounded-sm text-sm tracking-widest">
-              {t.common.comingSoonBtn}
-            </span>
-          </ComingSoonButton>
+          <a
+            href={reservationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#f0e4d3] text-[#3a3226] px-10 py-4 rounded-sm text-sm tracking-widest hover:bg-white transition-colors duration-300"
+          >
+            {t.visit.reservationBtn}
+          </a>
         </div>
       </div>
     </div>
