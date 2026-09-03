@@ -5,6 +5,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 import GoodsList from '../components/gallery/GoodsList'
 import Lightbox from '../components/gallery/Lightbox'
+import InstagramEmbed from '../components/common/InstagramEmbed'
 
 const artworkImageModules = import.meta.glob('../assets/artworks/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
@@ -66,6 +67,9 @@ function FirstFloor() {
           OPEN GALLERY & ART SHOP
         </h1>
         <p className="text-center text-[#8a7d63] text-sm tracking-widest mb-10">1F</p>
+        <div className="mb-10">
+          <InstagramEmbed permalink="https://www.instagram.com/reel/Dcq4UwIhjxE/" />
+        </div>
         <p className="text-center text-[#3a3226] mb-10">
           {t.firstFloor.intro}
         </p>

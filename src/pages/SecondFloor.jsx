@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import ExhibitionMap from '../components/gallery/ExhibitionMap'
 import VisitorGuidelines from '../components/gallery/VisitorGuidelines'
+import InstagramEmbed from '../components/common/InstagramEmbed'
 import { useLanguage } from '../i18n/LanguageContext'
 import { useStrings } from '../i18n/strings'
 
@@ -23,6 +24,9 @@ function SecondFloor() {
       <div className="text-center pt-16 pb-10 px-4">
         <h1 className="text-4xl font-serif text-[#3a3226] mb-2">Private Exhibition Room</h1>
         <p className="text-[#8a7d63] text-sm tracking-widest mb-10">2F</p>
+        <div className="mb-10">
+          <InstagramEmbed permalink="https://www.instagram.com/reel/DcvzPmAhc5P/" />
+        </div>
         <p className="text-[#3a3226] mb-6">
           {t.secondFloor.intro}
         </p>
