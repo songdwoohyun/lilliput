@@ -11,8 +11,8 @@ function InstagramEmbed({ permalink }) {
       <iframe
         src={`https://www.instagram.com/reel/${reelId}/embed/`}
         title={`Instagram reel ${reelId}`}
-        className="w-full border-0"
-        style={{ maxWidth: '540px', minWidth: '326px', height: '660px' }}
+        className="w-full border-0 h-[660px] md:h-[1100px]"
+        style={{ maxWidth: '540px', minWidth: '326px' }}
         allow="autoplay; encrypted-media"
         loading="lazy"
       />
