@@ -8,7 +8,7 @@ function InstagramEmbed({ permalink }) {
 
   return (
     <div
-      className="mx-auto overflow-hidden h-[660px] md:h-[900px]"
+      className="mx-auto overflow-hidden h-[660px] md:h-[865px]"
       style={{ maxWidth: '540px', minWidth: '326px' }}
     >
       <iframe
