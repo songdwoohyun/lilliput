@@ -45,12 +45,14 @@ const VIEWING_COURSES = [
     duration: '20분',
     priceWon: '6,000',
     description: '부담 없이 들러 공간의 분위기와 작품의\n핵심을 감상하기 좋은 라이트 코스입니다.',
+    mobileLines: ['부담 없이 들러 공간의', '분위기와 작품의 핵심을', '감상하기 좋은 라이트', '코스입니다.'],
   },
   {
     title: '장편 관람',
     duration: '50분',
     priceWon: '12,000',
     description: '프라이빗한 공간에서 작품과 깊이 교감하고,\n여유롭게 감상할 수 있는 딥코스입니다.',
+    mobileLines: ['프라이빗한 공간에서', '작품과 깊이 교감하고,', '여유롭게 감상할 수', '있는 딥코스입니다.'],
   },
 ]
 
@@ -72,13 +74,20 @@ function VisitorGuidelines({ showPrivateRoomNote = false }) {
 
             <div className="grid grid-cols-2 divide-x divide-[#c9bb9e] max-w-lg mx-auto mt-10">
               {VIEWING_COURSES.map((course) => (
-                <div key={course.title} className="px-2 sm:px-6 min-w-0">
+                <div key={course.title} className="px-1 sm:px-6 min-w-0">
                   <h3 className="text-lg font-semibold text-[#3a3226]">{course.title}</h3>
                   <p className="text-xs sm:text-sm text-[#8a7d63] mt-1 mb-3 whitespace-nowrap">
                     ({course.duration} | <span className="text-[0.8em]">1인</span> {course.priceWon}
                     {' '}원)
                   </p>
-                  <p className="text-sm text-[#5a5040] leading-relaxed whitespace-pre-line">{course.description}</p>
+                  <p className="md:hidden text-[11px] text-[#5a5040] leading-relaxed">
+                    {course.mobileLines.map((line, i) => (
+                      <span key={i} className="block whitespace-nowrap">{line}</span>
+                    ))}
+                  </p>
+                  <p className="hidden md:block text-sm text-[#5a5040] leading-relaxed whitespace-pre-line">
+                    {course.description}
+                  </p>
                 </div>
               ))}
             </div>
