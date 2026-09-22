@@ -25,6 +25,11 @@
   color-scheme: light only;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 html,
 body {
   background-color: #f0e4d3;
