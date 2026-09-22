@@ -90,7 +90,18 @@ function VisitorGuidelines({ showPrivateRoomNote = false }) {
           {t.about.guidelines.map((label, i) => (
             <div key={i} className="flex flex-col items-center text-center gap-4">
               <div className="text-[#4a5943]">{guidelineIcons[i]}</div>
-              <p className="text-[#3a3226] text-base leading-relaxed">{label}</p>
+              <p className="text-[#3a3226] text-base leading-relaxed">
+                {label.includes('\n') ? (
+                  <>
+                    {label.split('\n')[0]}
+                    <br className="sm:hidden" />
+                    <span className="hidden sm:inline"> </span>
+                    {label.split('\n')[1]}
+                  </>
+                ) : (
+                  label
+                )}
+              </p>
             </div>
           ))}
         </div>
