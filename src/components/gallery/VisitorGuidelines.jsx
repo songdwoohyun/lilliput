@@ -30,15 +30,27 @@ const guidelineIcons = [
   </svg>,
 ]
 
-const PRIVATE_ROOM_NOTE = `계단을 따라 올라가면 펼쳐지는 2층의 아늑한 5평 공간은, 오롯이 당신만을 위해 준비된 프라이빗 전시실입니다.
+const PRIVATE_ROOM_INTRO = `계단을 따라 올라가면 펼쳐지는 2층의 아늑한 5평 공간은,
+오롯이 당신만을 위해 준비된 프라이빗 전시실입니다.
 
 작품 하나하나에 담긴 이야기와 디테일을 더욱 깊이 있게 전해 드리고자,
-회차당 단 1팀(1인~최대 2인)만을 모시는 100% 사전 예약제로 운영됩니다.
+회차당 단 1팀(1인~최대 2인)만을 모시는 100% 사전 예약제로 운영됩니다.`
 
-관람 시간: 40분
-정원: 회차당 1~2인
+const PRIVATE_ROOM_OUTRO = `바쁜 일상에서 벗어나 아무런 방해 없이,
+작품 속 세상에 깊이 몰입해보는 시간을 선물합니다.`
 
-바쁜 일상에서 벗어나 40분 동안 아무런 방해 없이, 작품 속 세상에 깊이 몰입해보는 시간을 선물합니다.`
+const VIEWING_COURSES = [
+  {
+    title: '단편 관람',
+    price: '(20분 | 1인 6,000원)',
+    description: '부담 없이 들러 공간의 분위기와 작품의\n핵심을 감상하기 좋은 라이트 코스입니다.',
+  },
+  {
+    title: '장편 관람',
+    price: '(50분 | 1인 12,000원)',
+    description: '프라이빗한 공간에서 작품과 깊이 교감하고,\n여유롭게 감상할 수 있는 딥코스입니다.',
+  },
+]
 
 function VisitorGuidelines({ showPrivateRoomNote = false }) {
   const { lang } = useLanguage()
@@ -54,8 +66,19 @@ function VisitorGuidelines({ showPrivateRoomNote = false }) {
 
         {showPrivateRoomNote && (
           <div className="max-w-2xl mx-auto text-center mt-10">
-            <h3 className="text-lg font-semibold text-[#3a3226] mb-4">2F 프라이빗 전시실 안내</h3>
-            <p className="text-[#5a5040] leading-relaxed whitespace-pre-line">{PRIVATE_ROOM_NOTE}</p>
+            <p className="text-[#5a5040] leading-relaxed whitespace-pre-line">{PRIVATE_ROOM_INTRO}</p>
+
+            <div className="grid grid-cols-2 divide-x divide-[#c9bb9e] max-w-lg mx-auto mt-10">
+              {VIEWING_COURSES.map((course) => (
+                <div key={course.title} className="px-3 sm:px-6">
+                  <h3 className="text-lg font-semibold text-[#3a3226]">{course.title}</h3>
+                  <p className="text-sm text-[#8a7d63] mt-1 mb-3">{course.price}</p>
+                  <p className="text-sm text-[#5a5040] leading-relaxed whitespace-pre-line">{course.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-[#5a5040] leading-relaxed whitespace-pre-line mt-10">{PRIVATE_ROOM_OUTRO}</p>
           </div>
         )}
 
