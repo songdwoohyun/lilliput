@@ -30,6 +30,8 @@ body {
   background-color: #f0e4d3;
   color: #3a3226;
   font-weight: 300;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .font-vintage {
