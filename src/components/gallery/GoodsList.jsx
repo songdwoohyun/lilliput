@@ -3,6 +3,18 @@ import { AnimatePresence, motion } from 'framer-motion'
 import goods from '../../data/goods.json'
 import Lightbox from './Lightbox'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
+import { useLanguage } from '../../i18n/LanguageContext'
+import { useStrings } from '../../i18n/strings'
+
+function localize(item, lang) {
+  if (lang === 'ja') {
+    return { summary: item.summary_ja || item.summary, detail: item.detail_ja || item.detail }
+  }
+  if (lang === 'en') {
+    return { summary: item.summary_en || item.summary, detail: item.detail_en || item.detail }
+  }
+  return { summary: item.summary, detail: item.detail }
+}
 
 const categoryImageModules = import.meta.glob('../../assets/goods/*/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', {
   eager: true,
@@ -28,7 +40,7 @@ const goodsWithImages = goods.map((item) => ({
   images: toSortedImageList(imagesByCategory[item.id] || {}),
 }))
 
-function CategoryGalleryModal({ category, onClose, onSelectImage }) {
+function CategoryGalleryModal({ category, onClose, onSelectImage, closeLabel }) {
   useLockBodyScroll(Boolean(category))
 
   // The first image doubles as the row's cover thumbnail, so skip it here
@@ -77,7 +89,7 @@ function CategoryGalleryModal({ category, onClose, onSelectImage }) {
               onClick={onClose}
               className="mt-6 text-sm text-[#8a7d63] hover:text-[#3a3226] transition-colors duration-300"
             >
-              ✕ 닫기
+              {closeLabel}
             </button>
           </motion.div>
         </motion.div>
@@ -86,7 +98,7 @@ function CategoryGalleryModal({ category, onClose, onSelectImage }) {
   )
 }
 
-function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery }) {
+function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery, imagePendingLabel }) {
   const hasImages = item.images.length > 0
 
   return (
@@ -105,7 +117,7 @@ function GoodsRow({ item, expanded, onToggleExpand, onOpenGallery }) {
           />
         ) : (
           <span className="w-full h-full flex items-center justify-center text-[#a89b7d] text-xs text-center px-2">
-            이미지 준비 중
+            {imagePendingLabel}
           </span>
         )}
       </button>
@@ -146,16 +158,21 @@ function GoodsList() {
   const [expandedId, setExpandedId] = useState(null)
   const [activeCategory, setActiveCategory] = useState(null)
   const [lightboxImage, setLightboxImage] = useState(null)
+  const { lang } = useLanguage()
+  const t = useStrings(lang)
+
+  const localizedGoods = goodsWithImages.map((item) => ({ ...item, ...localize(item, lang) }))
 
   return (
     <div className="max-w-2xl mx-auto divide-y divide-[#c9bb9e]">
-      {goodsWithImages.map((item) => (
+      {localizedGoods.map((item) => (
         <GoodsRow
           key={item.id}
           item={item}
           expanded={expandedId === item.id}
           onToggleExpand={() => setExpandedId(expandedId === item.id ? null : item.id)}
           onOpenGallery={setActiveCategory}
+          imagePendingLabel={t.modal.imagePending}
         />
       ))}
 
@@ -163,6 +180,7 @@ function GoodsList() {
         category={activeCategory}
         onClose={() => setActiveCategory(null)}
         onSelectImage={setLightboxImage}
+        closeLabel={t.modal.close}
       />
       <Lightbox image={lightboxImage} onClose={() => setLightboxImage(null)} />
     </div>
