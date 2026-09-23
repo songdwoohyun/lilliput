@@ -32,7 +32,7 @@ export const strings = {
     },
     about: {
       artistIntroTitle: '작가 소개',
-      collectionTitle: '더 릴리풋 컬렉션',
+      collectionTitle: '릴리풋 컬렉션',
       historyTitle: '연혁',
       soloTitle: '개인전',
       groupTitle: '단체전',
@@ -47,7 +47,7 @@ export const strings = {
         [
           '지난 19년, 작은 공간이 어떻게 삶을 위로하고 확장할 수 있는지 끊임없이 질문해왔습니다.',
           '그동안의 시간을 한데 모아',
-          "'더 릴리풋 컬렉션'이라는 이름으로 이 공간을 열었습니다.",
+          "'릴리풋 컬렉션'이라는 이름으로 이 공간을 열었습니다.",
         ],
         ['잠시 멈춰 서서 자신을 마주할 수 있는 작은 세상으로', '여러분을 초대합니다.'],
         ['천천히, 작은 세상이 건네는 이야기에 귀 기울여 주세요.'],
