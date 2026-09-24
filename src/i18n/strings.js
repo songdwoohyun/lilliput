@@ -151,7 +151,7 @@ export const strings = {
     home: {
       floor1Alt: '1階フロアガイド',
       floor2Alt: '2階フロアガイド',
-      aboutAlt: 'ザ・リリパット・コレクションについて',
+      aboutAlt: 'リリパット・コレクションについて',
       visitAlt: 'ご来店案内・アクセス',
       heroAlt: 'THE LILLIPUT Collection · ドールハウスギャラリー&アートショップ',
       reserveAlt: '2F予約はこちら',
@@ -174,7 +174,7 @@ export const strings = {
     },
     about: {
       artistIntroTitle: '作家紹介',
-      collectionTitle: 'ザ・リリプット・コレクション',
+      collectionTitle: 'リリプット・コレクション',
       historyTitle: '沿革',
       soloTitle: '個展',
       groupTitle: 'グループ展',
@@ -189,7 +189,7 @@ export const strings = {
         [
           'この19年間、小さな空間がどのように人生を慰め、広げてくれるのかを問い続けてきました。',
           'その時間を一つに集めて、',
-          '『ザ・リリプット・コレクション』という名前でこの空間を開きました。',
+          '『リリプット・コレクション』という名前でこの空間を開きました。',
         ],
         ['少し立ち止まって自分自身と向き合える小さな世界へ', '皆様をご招待します。'],
         ['どうぞゆっくりと、小さな世界が語りかける物語に耳を傾けてください。'],
