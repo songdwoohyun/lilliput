@@ -9,9 +9,9 @@ export const strings = {
     home: {
       floor1Alt: '1층 공간 안내',
       floor2Alt: '2층 공간 안내',
-      aboutAlt: '더 릴리풋 컬렉션 소개',
+      aboutAlt: '릴리풋 컬렉션 소개',
       visitAlt: '방문 안내 및 오시는 길',
-      heroAlt: '더 릴리풋 컬렉션 · 돌하우스 갤러리 & 아트샵',
+      heroAlt: '릴리풋 컬렉션 · 돌하우스 갤러리 & 아트샵',
       reserveAlt: '2F 예약하러 가기',
       copyright: '본 웹사이트의 모든 사진과 작품은 저작권법의 보호를 받으며, 무단 복제 및 상업적 이용을 금합니다.',
     },

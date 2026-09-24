@@ -15,10 +15,10 @@ function SecondFloor() {
   return (
     <div className="bg-[#f0e4d3]">
       <Helmet>
-        <title>2층 전시 안내 | 더 릴리풋 컬렉션</title>
+        <title>2층 전시 안내 | 릴리풋 컬렉션</title>
         <meta
           name="description"
-          content="더 릴리풋 컬렉션 2층은 회차당 단 1팀(1~2인)만을 모시는 100% 사전 예약제 프라이빗 전시실입니다. 40분 동안 방해 없이 작품 하나하나에 담긴 이야기와 디테일을 깊이 있게 감상하는 특별한 시간을 예약해보세요."
+          content="릴리풋 컬렉션 2층은 회차당 단 1팀(1~2인)만을 모시는 100% 사전 예약제 프라이빗 전시실입니다. 40분 동안 방해 없이 작품 하나하나에 담긴 이야기와 디테일을 깊이 있게 감상하는 특별한 시간을 예약해보세요."
         />
       </Helmet>
       <div className="text-center pt-16 pb-10 px-4">

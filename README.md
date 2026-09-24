@@ -1,6 +1,6 @@
 # THE LILLIPUT COLLECTION
 
-수원 돌하우스 미니어처 공방 "더 릴리풋 컬렉션" 공식 웹사이트.
+수원 돌하우스 미니어처 공방 "릴리풋 컬렉션" 공식 웹사이트.
 운영: 작가 김진순 | 배포: https://thelilliput.com
 
 ## 스택

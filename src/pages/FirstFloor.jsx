@@ -49,10 +49,10 @@ function FirstFloor() {
   return (
     <div className="min-h-screen bg-[#f0e4d3] px-4 sm:px-8 py-16">
       <Helmet>
-        <title>1층 작품 전시 | 더 릴리풋 컬렉션</title>
+        <title>1층 작품 전시 | 릴리풋 컬렉션</title>
         <meta
           name="description"
-          content="더 릴리풋 컬렉션 1층 오픈 갤러리 & 아트샵에서는 돌하우스 작품 상설 전시와 함께 에코백, 릴리풋 문(Door) 오브제, 윙체어, 아트 포스트카드 등 작가가 직접 만든 다양한 굿즈를 직접 보고 만나보실 수 있습니다."
+          content="릴리풋 컬렉션 1층 오픈 갤러리 & 아트샵에서는 돌하우스 작품 상설 전시와 함께 에코백, 릴리풋 문(Door) 오브제, 윙체어, 아트 포스트카드 등 작가가 직접 만든 다양한 굿즈를 직접 보고 만나보실 수 있습니다."
         />
       </Helmet>
       <Link
