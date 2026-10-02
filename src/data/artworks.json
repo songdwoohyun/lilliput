@@ -162,7 +162,9 @@
     "year": "2009",
     "description": "돌하우스를 알게되고 찾아갔던 \n수원 돌하우스월드 공방에서 완성한 두번째 작품입니다.\n그 시절의 가족의 모습을 담은 풋풋한 침실입니다.",
     "image": "",
-    "titleJa": "ベッドルーム I"
+    "titleJa": "ベッドルーム I",
+    "description_en": "The second piece I completed at the Dollhouse World studio in Suwon,\nwhich I sought out after discovering dollhouses.\nA fresh, youthful bedroom capturing my family as they were in those days.",
+    "description_ja": "ドールハウスを知り、訪ねた\n水原のドールハウスワールド工房で完成させた二作目の作品です。\nあの頃の家族の姿を込めた、初々しい寝室です。"
   },
   {
     "id": "bedroom-2",
@@ -171,7 +173,9 @@
     "year": "2020",
     "description": "저에게 돌하우스는 \n판타지를 실현하는 자유로운 공간입니다. \n어떠한 형식적 제약도 없이 \n의도한 바를 마음껏 표현할 수 있습니다.\n정원 한가운데 자리한 침대, 지붕 꼭대기에 놓인 의자처럼 현실의 한계를 넘어선 시도들이 돌하우스 안에서는 자유롭게 이루어집니다. 이러한 판타지적 요소는 작업을 계속해 나갈 수 있는 설렘의 동력이 됩니다.\n오롯이 침실만으로 채워진 하얀 건물 또한 저의 사적인 판타지를 담았습니다.",
     "image": "",
-    "titleJa": "ベッドルーム II"
+    "titleJa": "ベッドルーム II",
+    "description_en": "To me, a dollhouse\nis a free space where fantasy becomes real.\nWithout any formal constraints,\nI can express exactly what I intend.\nA bed in the middle of a garden, a chair perched on top of a roof: attempts that go beyond the limits of reality come about freely inside a dollhouse. These fantastical elements become the thrilling driving force that keeps me working.\nThe white building filled with nothing but bedrooms also holds my own private fantasy.",
+    "description_ja": "私にとってドールハウスは、\nファンタジーを実現する自由な空間です。\nいかなる形式的な制約もなく、\n意図したことを思う存分表現できます。\n庭の真ん中に置かれたベッド、屋根の上に置かれた椅子のように、現実の限界を超えた試みが、ドールハウスの中では自由に叶います。こうしたファンタジーの要素は、制作を続けていくための胸の高鳴りの原動力となります。\n寝室だけで満たされた白い建物にも、私だけの秘めたファンタジーを込めました。"
   },
   {
     "id": "le-corbusiers-cabin",
@@ -191,7 +195,9 @@
     "year": "2010",
     "description": "\"화가 밀레의 숨결이 남아있는 바르비종 마을에 작은 꽃집이 있다면?\"\n\n프랑스 베르사유 궁전 안에 있는 '왕비의 마을' 코티지를 모티브로 집을 짓고, 수지점토를 이용해 꽃과 다육이, 나뭇잎 한 장 한 장을 정성껏 빚어 완성한 작품입니다.\n인사동 쌈지길 회원전 당시 포스터 메인 작품으로 선보였던 뜻깊은 첫 전시의 추억이자, 다시는 담아내지 못할 밀도 높은 애정과 정성이 깃들어 있습니다.",
     "image": "",
-    "titleJa": "バルビゾンの花園"
+    "titleJa": "バルビゾンの花園",
+    "description_en": "\"What if there were a small flower shop in the village of Barbizon, where the breath of the painter Millet still lingers?\"\n\nModeled on a cottage in the Queen's Hamlet inside the Palace of Versailles in France, this piece was completed by carefully shaping every flower, succulent, and leaf, one by one, out of resin clay.\nIt is a memento of my meaningful first exhibition, when it appeared as the main poster piece at the Insadong Ssamziegil members' show, and it holds an intensity of affection and devotion that I could never capture again.",
+    "description_ja": "『画家ミレーの息づかいが残るバルビゾンの村に、小さな花屋があったら?』\n\nフランスのヴェルサイユ宮殿内にある「王妃の村里」のコテージをモチーフに家を建て、樹脂粘土で花や多肉植物、葉っぱの一枚一枚を丁寧に作り上げた作品です。\n仁寺洞サムジギルの会員展の際にポスターのメインを飾った、思い出深い初めての展示の記憶であり、二度と込めることのできない濃密な愛情と真心が宿っています。"
   },
   {
     "id": "tasha-tudors-cabin",
@@ -200,7 +206,9 @@
     "year": "2013",
     "description": "타샤 튜더는 미국의 동화작가이자 30만 평의 정원을 아름답게 가꾸며 자신만의 속도로 삶을 살았던 분입니다.\n그녀가 아들과 함께 손수 지은 농가를 모티브로, 따뜻한 온기가 흐르는 공간을 작업하고자 했습니다.\n작품을 바라보고 있으면 \n타샤할머니가 지켜온 시간들이 깊은 울림으로 전해집니다.",
     "image": "",
-    "titleJa": "ターシャ・テューダーの小屋"
+    "titleJa": "ターシャ・テューダーの小屋",
+    "description_en": "Tasha Tudor was an American children's book author who lived life at her own pace, beautifully tending a garden of 300,000 pyeong.\nInspired by the farmhouse she built by hand with her son, I wanted to create a space filled with warmth.\nWhen you gaze at this piece,\nthe time that Grandma Tasha safeguarded resonates deeply.",
+    "description_ja": "ターシャ・テューダーは、アメリカの絵本作家であり、30万坪の庭を美しく育てながら、自分だけのペースで人生を歩んだ方です。\n彼女が息子と一緒に手づくりした農家をモチーフに、温かな温もりが流れる空間を作りたいと思いました。\n作品を眺めていると、\nターシャおばあさんが守り続けてきた時間が、深い余韻となって伝わってきます。"
   },
   {
     "id": "carl-larssons-cabin",
@@ -209,7 +217,9 @@
     "year": "2021",
     "description": "모두가 고립되고 불안했던 코로나 시기, 오롯이 작업에 몰입하며 마음을 정돈하고 희망을 찾아갔던 여정이 담겨 있는 작품입니다.\n\n스웨덴의 화가 칼 라르손(Carl Larsson)은 가족과 일상의 소박한 아름다움을 따뜻하고 밝은 수채화로 담아냈습니다. \n그가 사랑했던 집과 가족의 이야기를 담아내는 과정은, 힘든 시기를 관통하며 일상 속 행복의 의미를 다시금 깨닫게 해 주었습니다.\n아홉 살이던 딸아이의 방 벽면에 그려주었던 창문 밖 풍경이 칼 라르손의 화집에서 비롯되었다는 것이 작업의 큰 동기가 되었습니다.\n마스크를 벗지 못했던 답답한 시기에 조심스럽게 희망을 건넸던 <행복의 비밀> 전시의 마음을 담아, \"행복이란 아주 가까운 일상 속에, 그리고 오롯이 내 마음에서 비롯된다\"는 이야기를 전하고 싶습니다.",
     "image": "",
-    "titleJa": "カール・ラーションの小屋"
+    "titleJa": "カール・ラーションの小屋",
+    "description_en": "In the time of Covid, when everyone was isolated and anxious, this piece holds the journey of immersing myself in my work, putting my mind in order, and finding hope.\n\nThe Swedish painter Carl Larsson captured the simple beauty of family and everyday life in warm, bright watercolors.\nThe process of portraying the home and family he loved carried me through a hard time and let me realize anew the meaning of happiness in daily life.\nThat the view outside the window I once painted on my nine-year-old daughter's bedroom wall came from a collection of Carl Larsson's paintings became a major motivation for this work.\nCarrying the spirit of the \"The Secret of Happiness\" exhibition, which cautiously offered hope during those stifling days when we could not take off our masks, I want to tell the story that \"happiness lies very close, in everyday life, and begins entirely within my own heart.\"",
+    "description_ja": "誰もが孤立し不安だったコロナの時期、ひたすら制作に没頭して心を整え、希望を探していった旅路が込められた作品です。\n\nスウェーデンの画家カール・ラーションは、家族と日常の素朴な美しさを、温かく明るい水彩画で描きました。\n彼が愛した家と家族の物語を描き出す過程は、つらい時期を通り抜けながら、日常の中にある幸せの意味をあらためて気づかせてくれました。\n9歳だった娘の部屋の壁に描いてあげた窓の外の風景が、カール・ラーションの画集に由来していることが、制作の大きな動機となりました。\nマスクを外せなかった息苦しい時期にそっと希望を差し出した『幸せの秘密』展の想いを込めて、「幸せとは、ごく身近な日常の中に、そしてひとえに自分の心から生まれるもの」というお話を伝えたいと思います。"
   },
   {
     "id": "ones-own-cabin",
