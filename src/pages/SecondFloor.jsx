@@ -46,6 +46,9 @@ function SecondFloor() {
         <p className="text-[#8a7d63] text-sm">
           {t.secondFloor.hintPublic}
         </p>
+        <p className="text-[#8a7d63] text-sm">
+          {t.secondFloor.hintPublicNote}
+        </p>
       </div>
 
       <ExhibitionMap showDescription={false} />

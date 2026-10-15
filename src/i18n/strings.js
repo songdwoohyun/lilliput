@@ -28,6 +28,7 @@ export const strings = {
       hintMobile: '작품을 눌러서 작품 설명을 확인해보세요.',
       mapLabelPublic: '2층 전시맵입니다.',
       hintPublic: '작품을 누르면 제목과 제작년도를 볼 수 있습니다.',
+      hintPublicNote: '관람 시 작품 설명을 함께 볼 수 있습니다.',
       scrollHint: '옆으로 스크롤하며 둘러보세요 →',
     },
     about: {
@@ -54,6 +55,33 @@ export const strings = {
       ],
       note: ["*'릴리풋'은", '《걸리버 여행기》 속 소인국의 이름이자,', '제 작업실의 이름입니다.'],
       guidelines: ['사진, 영상\n촬영 금지', '음식물, 음료\n반입 금지', '12세 이상\n관람가', '반려동물\n동반 금지'],
+      privateRoom: {
+        intro: `계단을 따라 올라가면 펼쳐지는 2층의 아늑한 공간은,
+오롯이 당신만을 위해 준비된 프라이빗 전시실입니다.
+
+작품 하나하나에 담긴 이야기와 디테일을 더욱 깊이 있게 전해 드리고자,
+회차당 단 1팀(1인~최대 2인)만을 모시는 100% 사전 예약제로 운영됩니다.`,
+        outro: `바쁜 일상에서 벗어나 아무런 방해 없이,
+작품 속 세상에 깊이 몰입해보는 시간을 선물합니다.`,
+        personLabel: '1인',
+        personFirst: true,
+        courses: [
+          {
+            title: '단편 관람',
+            duration: '20분',
+            price: '6,000 원',
+            description: '부담 없이 들러 공간의 분위기와 작품의\n핵심을 감상하기 좋은 라이트 코스입니다.',
+            mobileLines: ['부담 없이 들러 공간의', '분위기와 작품의 핵심을', '감상하기 좋은 라이트', '코스입니다.'],
+          },
+          {
+            title: '장편 관람',
+            duration: '50분',
+            price: '12,000 원',
+            description: '프라이빗한 공간에서 작품과 깊이 교감하고,\n여유롭게 감상할 수 있는 딥코스입니다.',
+            mobileLines: ['프라이빗한 공간에서', '작품과 깊이 교감하고,', '여유롭게 감상할 수', '있는 딥코스입니다.'],
+          },
+        ],
+      },
     },
     visit: {
       title: '오시는 길',
@@ -97,6 +125,7 @@ export const strings = {
       hintMobile: 'Tap a house illustration to view its description.',
       mapLabelPublic: 'This is the 2F exhibition map.',
       hintPublic: 'Tap an artwork to see its title and year.',
+      hintPublicNote: 'Artwork descriptions are available during your visit.',
       scrollHint: 'Scroll sideways to explore →',
     },
     about: {
@@ -127,6 +156,32 @@ export const strings = {
         'and also the name of my studio.',
       ],
       guidelines: ['No Photography or Filming', 'No Food or Drinks', 'Ages 12+', 'No Pets Allowed'],
+      privateRoom: {
+        intro: `Climb the stairs and you will find the cozy space of the second floor, a private exhibition room prepared for you alone.
+
+To share the story and detail within each work more deeply, it operates on a 100% advance-reservation basis, welcoming only one party (1–2 guests) per session.`,
+        outro: `A gift of time to step away from your busy day and lose yourself in the worlds within the works, undisturbed.`,
+        personLabel: 'per person',
+        personFirst: false,
+        courses: [
+          {
+            title: 'Short Visit',
+            duration: '20 min',
+            price: 'KRW 6,000',
+            description:
+              'A light course for a casual visit,\nideal for taking in the atmosphere of the space\nand the highlights of the works.',
+            mobileLines: ['A light course for', 'a casual visit, ideal', 'for the atmosphere and', 'highlights of the works.'],
+          },
+          {
+            title: 'Extended Visit',
+            duration: '50 min',
+            price: 'KRW 12,000',
+            description:
+              'A deep course for connecting with the works\nin a private space and viewing them\nat a relaxed pace.',
+            mobileLines: ['A deep course to connect', 'with the works in a', 'private space and enjoy', 'them at a relaxed pace.'],
+          },
+        ],
+      },
     },
     visit: {
       title: 'How to Find Us',
@@ -170,6 +225,7 @@ export const strings = {
       hintMobile: '家のイラストをタップして、作品説明をご確認ください。',
       mapLabelPublic: '2階の展示マップです。',
       hintPublic: '作品をタップすると、タイトルと制作年をご覧いただけます。',
+      hintPublicNote: 'ご観覧の際には、作品の解説もあわせてご覧いただけます。',
       scrollHint: '横にスクロールしてご覧ください →',
     },
     about: {
@@ -200,6 +256,30 @@ export const strings = {
         '私のアトリエの名前でもあります。',
       ],
       guidelines: ['写真・動画撮影禁止', '飲食物持ち込み禁止', '12歳以上鑑賞可', 'ペット同伴禁止'],
+      privateRoom: {
+        intro: `階段を上がると広がる2階の居心地のよい空間は、あなただけのために用意されたプライベート展示室です。
+
+作品一つひとつに込められた物語とディテールをより深くお伝えするため、1回につき1組（1名〜最大2名）のみをお迎えする、100％事前予約制で運営しています。`,
+        outro: `忙しい日常を離れ、誰にも邪魔されることなく、作品の中の世界にじっくり没入する時間をお贈りします。`,
+        personLabel: '1名',
+        personFirst: true,
+        courses: [
+          {
+            title: '短編鑑賞',
+            duration: '20分',
+            price: '6,000ウォン',
+            description: '気軽に立ち寄って、空間の雰囲気と作品の\nエッセンスを楽しむのにぴったりのライトコースです。',
+            mobileLines: ['気軽に立ち寄り、空間の', '雰囲気と作品の要点を', '楽しむのに最適な', 'ライトコースです。'],
+          },
+          {
+            title: '長編鑑賞',
+            duration: '50分',
+            price: '12,000ウォン',
+            description: 'プライベートな空間で作品とじっくり向き合い、\nゆったり鑑賞できるディープコースです。',
+            mobileLines: ['プライベートな空間で', '作品とじっくり向き合い、', 'ゆったり鑑賞できる', 'ディープコースです。'],
+          },
+        ],
+      },
     },
     visit: {
       title: 'アクセス',
