@@ -38,7 +38,7 @@ function ExhibitionMap({ showDescription = true }) {
         className="relative w-screen left-1/2 right-1/2 -mx-[50vw] overflow-x-auto"
         onScroll={handleMapScroll}
       >
-        <div className="relative w-full min-w-[1100px]">
+        <div className="relative w-[197.76%] min-w-[2175px]">
           <img
             src={mapImage}
             alt="2층 전시 지도"
