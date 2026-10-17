@@ -58,21 +58,21 @@ function ArtworkModal({ artwork, onClose, showDescription = true }) {
               </button>
             </div>
             <div className="p-8">
-              <h2 className="font-serif text-2xl text-[#3a3226]">{localized.title}</h2>
+              <h2 className="font-serif text-2xl text-[#1f1a12]">{localized.title}</h2>
               {localized.subtitle && (
-                <p className="text-sm italic text-[#8a7d63] mt-1">{localized.subtitle}</p>
+                <p className="text-sm italic text-[#5a4f3a] mt-1">{localized.subtitle}</p>
               )}
               {localized.year && (
-                <p className="text-xs text-[#a89b7d] mt-2 tracking-widest">{localized.year}</p>
+                <p className="text-xs text-[#6b5f48] mt-2 tracking-widest">{localized.year}</p>
               )}
               {showDescription && (
-                <p className="text-[#5a5040] leading-relaxed mt-6 whitespace-pre-line">
+                <p className="text-[#2e271c] leading-relaxed mt-6 whitespace-pre-line">
                   {localized.description}
                 </p>
               )}
               <button
                 onClick={onClose}
-                className="mt-8 text-sm text-[#8a7d63] hover:text-[#3a3226] transition-colors duration-300"
+                className="mt-8 text-sm text-[#5a4f3a] hover:text-[#1f1a12] transition-colors duration-300"
               >
                 {t.modal.close}
               </button>
